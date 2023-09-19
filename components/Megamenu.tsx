@@ -42,7 +42,7 @@ const FlyOutMenuOne = () => {
                             </div>
                             <Link href={child.href} className="space-y-1">
                                 <h3 className="text-slate-600 dark:text-white text-base font-secondary">{child.name}</h3>
-                                <p className="w-[248px] text-slate-500 text-xs font-book">{child.info}</p>
+                                <p className="w-[248px] text-slate-500 text-xs font-book dark:text-neutral-200">{child.info}</p>
                             </Link>
                         </div>
                     ))}
@@ -51,7 +51,9 @@ const FlyOutMenuOne = () => {
             <div className="bg-neutral-100 dark:bg-stone-900 dark:text-white">
                 <div className="px-14 pt-9 pb-[80px] space-y-11 lg:px-8 lg:w-screen">
                     <div>
-                        <h1 className="text-left text-slate-500 dark:text-white text-xs font-secondary">{secondTitle.toUpperCase()}</h1>
+                        <h1 className="text-left text-slate-500 dark:text-white text-xs font-secondary">
+                            {secondTitle.toUpperCase()}
+                        </h1>
                     </div>
                 {midFor[1].map((child, index) => (
                     <div className='flex space-x-6' key={index}>
@@ -59,8 +61,10 @@ const FlyOutMenuOne = () => {
                             <img src={child.icon} alt={child.name} className="mx-auto" />
                         </div>
                         <Link href={child.href} className="space-y-1">
-                            <h3 className="text-slate-600 dark:text-white text-base font-secondary">{child.name}</h3>
-                            <p className="w-[248px] text-slate-500 text-xs font-book">{child.info}</p>
+                            <h3 className="text-slate-600 dark:text-white text-base font-secondary">
+                                {child.name}
+                            </h3>
+                            <p className="w-[248px] text-slate-500 text-xs font-book dark:text-neutral-200">{child.info}</p>
                         </Link>
                     </div>
                 ))}

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const LearnMore = () => {
     return (
-        <div className="w-[auto] h-[24px] gap-[15px] pt-[50px] grid grid-cols-2">
+        <div className="w-64 h-6 pt-16 grid grid-cols-2 space-x-0">
             <Link className="text-indigo-500 text-lg font-primary left-0" href="#">
                 Learn more
             </Link>

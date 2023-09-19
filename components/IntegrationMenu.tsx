@@ -37,7 +37,7 @@ const IntegrationMenu = () => {
                             </div>
                             <Link href={child.href} className="space-y-1">
                                 <h3 className="text-slate-600 dark:text-white text-base font-secondary">{child.name}</h3>
-                                <p className="w-[248px] text-slate-500 text-xs font-book">{child.info}</p>
+                                <p className="w-[248px] text-slate-500 text-xs font-book dark:text-neutral-200">{child.info}</p>
                             </Link>
                         </div>
                     ))}
@@ -55,7 +55,7 @@ const IntegrationMenu = () => {
                         </div>
                         <Link href={child.href} className="space-y-1">
                             <h3 className="text-slate-600 dark:text-white text-base font-secondary">{child.name}</h3>
-                            <p className="w-[248px] text-slate-500 text-xs font-book">{child.info}</p>
+                            <p className="w-[248px] text-slate-500 text-xs font-book dark:text-neutral-200">{child.info}</p>
                         </Link>
                     </div>
                 ))}
