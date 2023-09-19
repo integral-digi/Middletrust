@@ -127,7 +127,7 @@ function NavBar() {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel id="country-menu" className="w-max flex-auto absolute mt-[24px] overflow-hidden rounded-[10px] bg-white text-sm leading-6">
+                                <Popover.Panel id="country-menu" className="w-max flex-auto absolute mt-[24px] overflow-hidden rounded-[10px] -ml-16 bg-white text-sm leading-6">
                                     <CountryFlyout />
                                 </Popover.Panel>
                             </Transition>
