@@ -23,7 +23,7 @@ const MobileNav = () => {
                     <div className="">
                         <Popover data-popover-target="NavBar">
                             <Popover.Button className="dark:fill-white">
-                                <Burger className="dark:fill-white" />
+                                <Burger />
                             </Popover.Button>
                             <Popover.Overlay className="fixed inset-0 bg-black opacity-30" />
                             <Transition
