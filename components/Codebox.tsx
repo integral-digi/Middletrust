@@ -1,12 +1,8 @@
 import { codeNode, codePython, codePHP, codeGolang } from "./CodeAPI";
 
-interface CodeSnippetProps {
-  code: string;
-};
-
 export const code = [codeNode, codePython, codePHP, codeGolang];
 
-export const CodeSnippet: React.FC<CodeSnippetProps> = ({ code }) => {
+export const CodeSnippet = ({ code }: any) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code);
     // Code copied to clipboard
