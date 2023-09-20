@@ -7,9 +7,9 @@ const BalanceAndLimits = () => {
     return (
         <div className="w-[100%] space-y-12">
             <div className="w-max">
-                <p className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">
+                <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">
                     Monthly Transaction Limit
-                </p>
+                </h3>
                 <Progress value={54.31} mt="md" size="sm" radius="xl" />
             </div>
             <div className="w-[100%]">
