@@ -3,7 +3,7 @@ import './globals.css';
 // import type { Metadata } from 'next';
 import Head from 'next/head';
 
-export const metadata = {
+const metadata = {
   title: 'Close your transactions with confidence',
   description: 'Middletrust is Africa&apos;s most reliable escrow payment service provider already helping thousands of individuals and businesses send and receive payments safely. process promotes complete transparency between transacting parties while facilitating quick and secure payments.',
 };
