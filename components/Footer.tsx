@@ -35,7 +35,7 @@ const Footer = () => {
     ];
 
     const socialLinks: SocialData[] = [
-        { label: "X", href: "https://x.com/middletrusthq", icon: "/images/x.svg" },
+        { label: "X", href: "https://x.com/middletrusthq", icon: "/images/X.svg" },
         { label: "Facebook", href: "https://facebook.com/middletrust", icon: "/images/facebook.svg" },
         { label: "Instagram", href: "https://instagram.com/middletrusthq", icon: "/images/instagram.svg" },
         { label: "Youtube", href: "https://youtube.com/middletrust", icon: "/images/youtube.svg" },
