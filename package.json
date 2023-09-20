@@ -17,6 +17,8 @@
     "@headlessui/react": "^1.7.17",
     "@headlessui/tailwindcss": "^0.2.0",
     "@heroicons/react": "^2.0.18",
+    "@mantine/core": "^7.0.0",
+    "@mantine/hooks": "^7.0.0",
     "autoprefixer": "^10.4.15",
     "framer-motion": "^10.16.4",
     "motion": "^10.16.2",
