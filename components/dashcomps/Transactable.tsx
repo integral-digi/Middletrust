@@ -45,5 +45,7 @@ const Transactable = () => {
                 </Table.Tr>
             )}
         </div>
-    )
-}
+    );
+};
+
+export default Transactable;
