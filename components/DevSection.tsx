@@ -2,6 +2,7 @@ import LearnMore from './LearnMore';
 import DevOptions from "./Tabs";
 import { CodeSnippet } from "./Codebox";
 import { code } from './Codebox';
+import { codeNode } from './CodeAPI';
 
 const DevSection = () => {
     return (
@@ -26,7 +27,7 @@ const DevSection = () => {
                             <DevOptions />
                         </div>
                         <div className='absolute right-0 bottom-28'>
-                            <CodeSnippet code={code} />
+                            <CodeSnippet code={codeNode} />
                         </div>
                     </div>
                 </div>
