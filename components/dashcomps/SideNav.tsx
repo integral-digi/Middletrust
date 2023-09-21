@@ -1,6 +1,6 @@
+"use client"
 import { useState } from 'react';
 import { Tooltip, UnstyledButton, Stack, rem } from '@mantine/core';
-import classes from './NavbarMinimalColored.module.css';
 
 interface NavbarLinkProps {
   icon: string;
@@ -12,7 +12,7 @@ interface NavbarLinkProps {
 const NavbarLink = ({ icon: Icon, label, active, onClick }: NavbarLinkProps) => {
   return (
     <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
-      <UnstyledButton onClick={onClick} className={classes.link} data-active={active || undefined}>
+      <UnstyledButton onClick={onClick} className="" data-active={active || undefined}>
         <div className='w-5 h-5' />
       </UnstyledButton>
     </Tooltip>
@@ -43,10 +43,10 @@ const SideNav = () => {
   ));
 
   return (
-    <nav className={classes.navbar}>
+    <nav className="">
       <img src='midicon.svg' className='' alt='logo' />
 
-      <div className={classes.navbarMain}>
+      <div className="">
         <Stack justify="center" gap={0}>
           {links}
         </Stack>

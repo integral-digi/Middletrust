@@ -2,6 +2,7 @@
 import './globals.css';
 // import type { Metadata } from 'next';
 import Head from 'next/head';
+import { MantineProvider } from '@mantine/core';
 
 const metadata = {
   title: 'Close your transactions with confidence',
@@ -22,9 +23,11 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         <meta name="description" content={metadata.description} />
         {/* Add other necessary meta tags, link tags, etc. */}
       </Head>
-      <body>
-        {children}
-      </body>
+      <MantineProvider>
+        <body>
+          {children}
+        </body>
+      </MantineProvider>
     </html>
   );
 };

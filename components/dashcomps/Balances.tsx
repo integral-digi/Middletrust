@@ -1,3 +1,4 @@
+"use client"
 import { Progress } from "@mantine/core"
 
 const ledgerBal: number = 23450;
