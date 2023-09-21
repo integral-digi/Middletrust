@@ -12,10 +12,10 @@ interface tableDataProps {
 };
 
 const tableData: tableDataProps[] = [
-    {id: 1, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "7 hours ago", amount: 4250, icon: "left.svg"},  
-    {id: 2, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "Yesterday", amount: 32.50, icon: "left.svg"},
-    {id: 3, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "Yesterday", amount: 255, icon: "left.svg"},
-    {id: 4, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "Yesterday", amount: 1299, icon: "left.svg"},
+    {id: 1, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "7 hours ago", amount: 4250, icon: "lefticon.svg"},  
+    {id: 2, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "Yesterday", amount: 32.50, icon: "lefticon.svg"},
+    {id: 3, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "Yesterday", amount: 255, icon: "lefticon.svg"},
+    {id: 4, avatar: "/avatars/avatar.png", name: "Abel Davidson", time: "Yesterday", amount: 1299, icon: "lefticon.svg"},
 ];
 
 const Transactable = () => {

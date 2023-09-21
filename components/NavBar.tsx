@@ -24,7 +24,7 @@ function NavBar() {
     const [isDarkMode, setIsDarkMode] = useState(false);
     return (
         <div className="w-full dark:bg-[#1E1A1A] py-[36px] px-8 lg:hidden">
-            <div className="mx-auto max-w-max flex items-center justify-between flex-wrap lg:flex-nowrap gap-20">
+            <nav className="mx-auto max-w-max flex items-center justify-between flex-wrap lg:flex-nowrap gap-20">
                 <div className="flex items-center cursor-pointer w-max">
                     <img
                         src={isDarkMode ? mainLogoVariant : mainLogo}
@@ -142,7 +142,7 @@ function NavBar() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
     );
 }
