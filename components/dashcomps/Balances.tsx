@@ -1,5 +1,5 @@
 "use client"
-import { Progress } from "@mantine/core"
+import { Progress } from "@mantine/core";
 
 const ledgerBal: number = 23450;
 const escrowBal: number = 30489;
@@ -11,7 +11,7 @@ const BalanceAndLimits = () => {
                 <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">
                     Monthly Transaction Limit
                 </h3>
-                <Progress value={54.31} mt="md" size="sm" radius="xl" />
+                <Progress value={30} mt="md" size="sm" radius="xl" />
             </div>
             <div className="w-[100%]">
                 <div className="flex items-center">

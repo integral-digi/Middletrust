@@ -15,7 +15,7 @@ const summaryData: SummaryDataProps[] = [
 
 const DashChart = () => {
     return (
-        <div className="">
+        <div className="relative">
             <RadialBarChart
                 width={500}
                 height={300}
@@ -28,7 +28,7 @@ const DashChart = () => {
             >      
                 <RadialBar
                     background
-                    dataKey="uv"
+                    dataKey="amount"
                 />
                 <Legend
                     iconSize={10}
@@ -36,7 +36,7 @@ const DashChart = () => {
                     height={140}
                     layout="vertical"
                     verticalAlign="middle"
-                    className=""
+                    className="absolute left-8"
                 />
             </RadialBarChart>
         </div>
