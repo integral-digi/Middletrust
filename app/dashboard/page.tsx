@@ -10,7 +10,7 @@ import DashContact from "@/components/dashcomps/UserContacts";
 
 const DashHome = () => {
     return (
-        <body className="w-full">
+        <body className="w-full dark:bg-[#1E1A1A] dark:text-white">
             <div className="">
                 <SideNav />
             </div>
@@ -18,8 +18,8 @@ const DashHome = () => {
                 <div className="top-0 py-6 w-full">
                     <TopBar />
                 </div>
-                <div className="mt-24 grid grid-cols-2 justify-between gap-[10%] w-full">
-                    <div className="block space-y-24 w-full">
+                <div className="mt-24 grid grid-cols-2 justify-between gap-[20%] w-full">
+                    <div className="block space-y-24 w-fit">
                         <div className="space-y-12">
                             <AccBalance />
                             <BalanceAndLimits />

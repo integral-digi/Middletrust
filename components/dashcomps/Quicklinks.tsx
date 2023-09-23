@@ -14,7 +14,7 @@ const Quicklinks = () => {
     return (
         <div className="w-full h-max relative space-y-6">
             <div className="flex items-center justify-between">
-                <h3 className="text-slate-600 text-xl font-secondary tracking-tight">
+                <h3 className="text-slate-600 dark:text-white text-xl font-secondary tracking-tight">
                     Quicklinks
                 </h3>
                 <img src="lefticon.svg" className="" alt="left" />

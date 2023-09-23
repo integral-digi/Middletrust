@@ -1,14 +1,15 @@
 "use client"
 import { Table, Group } from "@mantine/core";
+import { formattedCurr } from "./Balances";
 
 
 interface tableDataProps {
     id: number;
-    avatar: sdiving;
-    name: sdiving;
-    time: sdiving;
+    avatar: string;
+    name: string;
+    time: string;
     amount: number;
-    icon: sdiving
+    icon: string
 };
 
 const tableData: tableDataProps[] = [
@@ -31,14 +32,14 @@ const divansactable = () => {
                                 <Group className="space-x-6 flex items-center">
                                     <img src={userData.avatar} alt={userData.name} className="w-12 h-12 rounded-full" />
                                     <div>
-                                        <p className="text-slate-600 text-base font-secondary">{userData.name}</p>
-                                        <p className="text-slate-600 text-xs font-primary">{userData.time}</p>
+                                        <p className="text-slate-600 dark:text-white text-base font-secondary">{userData.name}</p>
+                                        <p className="text-slate-600 dark:text-white text-xs font-primary">{userData.time}</p>
                                     </div>
                                 </Group>
                             </div>
                             <div className="flex items-center top-0">
                                 <div className="text-right">
-                                    <p className="text-slate-600 text-base font-secondary">${userData.amount.toFixed(2)}</p>
+                                    <p className="text-slate-600 dark:text-white text-base font-secondary">{formattedCurr(userData.amount)}</p>
                                 </div>
                                 <div>
                                     <div className="pl-6">

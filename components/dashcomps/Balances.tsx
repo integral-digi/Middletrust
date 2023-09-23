@@ -1,9 +1,17 @@
 "use client"
-import { Progress } from "@mantine/core";
 import Limiter from "./Limiter";
 
-const ledgerBal: number = 23450;
-const escrowBal: number = 30489;
+export const formattedCurr = (curr: number) => {
+    return curr.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2, // Ensure two decimal places
+        maximumFractionDigits: 2, // Limit to two decimal places
+    });
+};
+
+const ledgerBal: string = formattedCurr(23450);
+const escrowBal: string = formattedCurr(30489);
 
 const BalanceAndLimits = () => {
     return (
@@ -18,22 +26,22 @@ const BalanceAndLimits = () => {
             </div>
             <div className="w-[100%]">
                 <div className="flex items-center space-x-5">
-                    <div className="flex items-center pl-4 space-x-8 bg-white rounded-2xl border-2 border-neutral-100 w-60 h-24">
+                    <div className="flex items-center pl-4 space-x-8 bg-transparent rounded-2xl border-2 border-neutral-100 w-60 h-24">
                         <img src="categories.svg" alt="category icon" className="" />
                         <div className="space-y-4">
                             <p className="dark:text-white text-slate-600 text-opacity-50 text-xs font-primary">
                                 Ledger Balance
                             </p>
-                            <p className="text-slate-600 dark:text-white text-2xl font-black">${ledgerBal.toFixed(2)}</p>
+                            <p className="text-slate-600 dark:text-white text-2xl font-black">{ledgerBal}</p>
                         </div>
                     </div>
-                    <div className="flex items-center pl-4 space-x-8 bg-white rounded-2xl border-2 border-neutral-100 w-60 h-24">
+                    <div className="flex items-center pl-4 space-x-8 bg-transparent rounded-2xl border-2 border-neutral-100 w-60 h-24">
                         <img src="categories.svg" alt="category icon" className="" />
                         <div className="space-y-4">
                             <p className="dark:text-white text-slate-600 text-opacity-50 text-xs font-primary">
                                 In Escrow
                             </p>
-                            <p className="text-slate-600 dark:text-white text-2xl font-black">${escrowBal.toFixed(2)}</p>
+                            <p className="text-slate-600 dark:text-white text-2xl font-black">{escrowBal}</p>
                         </div>
                     </div>
                 </div>
