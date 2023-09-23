@@ -4,11 +4,11 @@ import { Table, Group } from "@mantine/core";
 
 interface tableDataProps {
     id: number;
-    avatar: string;
-    name: string;
-    time: string;
+    avatar: sdiving;
+    name: sdiving;
+    time: sdiving;
     amount: number;
-    icon: string
+    icon: sdiving
 };
 
 const tableData: tableDataProps[] = [
@@ -18,36 +18,40 @@ const tableData: tableDataProps[] = [
     {id: 4, avatar: "/avatars/avatar.jpg", name: "Abel Davidson", time: "Yesterday", amount: 1299, icon: "lefticon.svg"},
 ];
 
-const Transactable = () => {
+const divansactable = () => {
     return (
-        <div className="">
+        <div className="space-y-6">
             <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">Transaction History</h3>
             <hr className="w-[100%] h-0.5 dark:bg-neutral-100" />
-            <Table className="py-6 space-y-6">
-                {tableData.map((userData) => 
-                    <Table.Tr key={userData.id} className="justify-between space-y-6">
-                        <Table.Td>
-                            <Group className="flex">
-                                <img src={userData.avatar} alt={userData.name} className="w-14 h-14 rounded-full" />
-                                <div className="justify-items-start">
-                                    <p className="w-max text-slate-600 text-base font-secondary">{userData.name}</p>
-                                    <p className="w-max text-slate-600 text-xs font-primary">{userData.time}</p>
+            <div className="w-full h-max">
+                <div className="space-y-6">
+                    {tableData.map((userData) => (
+                        <div key={userData.id} className="gap-y-6 flex justify-between">
+                            <div>
+                                <Group className="space-x-6 flex items-center">
+                                    <img src={userData.avatar} alt={userData.name} className="w-12 h-12 rounded-full" />
+                                    <div>
+                                        <p className="text-slate-600 text-base font-secondary">{userData.name}</p>
+                                        <p className="text-slate-600 text-xs font-primary">{userData.time}</p>
+                                    </div>
+                                </Group>
+                            </div>
+                            <div className="flex items-center top-0">
+                                <div className="text-right">
+                                    <p className="text-slate-600 text-base font-secondary">${userData.amount.toFixed(2)}</p>
                                 </div>
-                            </Group>
-                        </Table.Td>
-                        <Table.Td>
-                            <p className="text-right text-slate-600 text-base font-secondary">${userData.amount.toFixed(2)}</p>
-                        </Table.Td>
-                        <Table.Td>
-                            <span className="right-0">
-                                <img src={userData.icon} alt="left icon" className="h-3 w-auto" />
-                            </span>
-                        </Table.Td>
-                    </Table.Tr>
-                )}
-            </Table>
+                                <div>
+                                    <div className="pl-6">
+                                        <img src={userData.icon} alt="left icon" className="h-3 w-auto" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };
 
-export default Transactable;
+export default divansactable;

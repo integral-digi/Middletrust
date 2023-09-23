@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { Tooltip, UnstyledButton, Stack, rem } from '@mantine/core';
+import Link from 'next/link';
 
 interface NavbarLinkProps {
   icon: string;
@@ -9,53 +9,55 @@ interface NavbarLinkProps {
   onClick?(): void;
 }
 
-const NavbarLink = ({ icon: Icon, label, active, onClick }: NavbarLinkProps) => {
-  return (
-    <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
-      <UnstyledButton onClick={onClick} className="" data-active={active || undefined}>
-        <div className='w-5 h-5' />
-      </UnstyledButton>
-    </Tooltip>
-  );
-};
+const navData = [
+  { icon: "Home.svg", label: 'Home', href: "/home" },
+  { icon: "Transaction.svg", label: 'Deposit Funds', href: "/deposits" },
+  { icon: "Withdrawal.svg", label: 'Withdraw Funds', href: "/withdrawal" },
+  { icon: "Summary.svg", label: 'Releases', href: "/transactions" },
+  { icon: "Trustlinkdash.svg", label: 'Trustlink' , href: "/trustlink"},
+  { icon: "Profile.svg", label: 'Account', href: "/account" },
+];
 
-const mockdata = [
-  { icon: "Home.svg", label: 'Home' },
-  { icon: "Transaction.svg", label: 'Deposit Funds' },
-  { icon: "Withdrawal.svg", label: 'Withdraw Funds' },
-  { icon: "Summary.svg", label: 'Releases' },
-  { icon: "Trustlink.svg", label: 'Trustlink' },
-  { icon: "Profile.svg", label: 'Account' },
-  { icon: "Settings.svg", label: 'Settings' },
-  { icon: "Referral.svg", label: 'Refer' },
+const navDataTwo = [
+  { icon: "Settings.svg", label: 'Settings', href: "/settings" },
+  { icon: "Referral.svg", label: 'Refer', href: "/refer" }
 ];
 
 const SideNav = () => {
   const [active, setActive] = useState(2);
 
-  const links = mockdata.map((link, index) => (
-    <NavbarLink
+  const links = navData.map((link, index) => (
+    <div
       {...link}
       key={link.label}
-      active={index === active}
       onClick={() => setActive(index)}
-    />
+      className='py-6'
+    >
+      <Link href={link.href} className=''>
+        <img src={link.icon} alt={link.label} className='w-6 h-6' />
+      </Link>
+    </div>
   ));
 
   return (
-    <nav className="">
-      <img src='midicon.svg' className='' alt='logo' />
-
-      <div className="">
-        <Stack justify="center" gap={0}>
+    <nav className="w-24 h-screen bg-neutral-100 dark:bg-stone-900 absolute left-0 top-0">
+       <div className='relative mx-auto px-8 pt-12 justify-center items-center space-y-16'>
+        <div className=''>
+          <img src='midicon.svg' className='' alt='logo' />
+        </div>
+        <div className=''>
           {links}
-        </Stack>
+        </div>
+        <div className=''>
+          {navDataTwo.map((link, index)=> (
+            <div key={index} className='py-6'>
+              <Link href={link.href} className=''>
+                <img src={link.icon} alt={link.label} className='w-6 h-6' />
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-
-      <Stack justify="center" gap={0}>
-        <NavbarLink icon={mockdata[6].icon} label={mockdata[6].label} />
-        <NavbarLink icon={mockdata[7].icon} label={mockdata[7].label} />
-      </Stack>
     </nav>
   );
 };

@@ -6,6 +6,7 @@ interface SummaryDataProps {
     amount: number;
     fill: string;
 };
+const transactionTotal = 59485;
 
 const summaryData: SummaryDataProps[] = [
     {name: "Total Inflows", amount: 43234, fill: "#6A5ACD"},
@@ -15,30 +16,35 @@ const summaryData: SummaryDataProps[] = [
 
 const DashChart = () => {
     return (
-        <div className="relative">
-            <RadialBarChart
-                width={500}
-                height={300}
-                cx={150}
-                cy={150}
-                innerRadius={20}
-                outerRadius={140}
-                barSize={10}
-                data={summaryData}
-            >      
-                <RadialBar
-                    background
-                    dataKey="amount"
-                />
-                <Legend
-                    iconSize={10}
-                    width={120}
-                    height={140}
-                    layout="vertical"
-                    verticalAlign="middle"
-                    className="absolute left-8"
-                />
-            </RadialBarChart>
+        <div className="w-full space-y-12 relative">
+            <h3 className="text-slate-600 text-xl font-secondary tracking-tight">
+                Transaction Stats
+            </h3>
+            <div className="left-0 flex items-center space-x-0">
+                <RadialBarChart
+                    width={500}
+                    height={248}
+                    cx={128}
+                    cy={128}
+                    innerRadius={64}
+                    outerRadius={120}
+                    barSize={10}
+                    data={summaryData}
+                >      
+                    <RadialBar
+                        background
+                        dataKey="amount"
+                    />
+                </RadialBarChart>
+                <div className="my-auto left-[88px] mx-auto absolute">
+                    <p className="w-max h-9 text-center text-slate-600 text-xl font-primary leading-loose">
+                        ${transactionTotal}
+                    </p>
+                    <p className="w-max text-center text-slate-600 text-sm leading-normal">
+                        Transactions
+                    </p>
+                </div>
+            </div>
         </div>
     )
 };

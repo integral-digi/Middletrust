@@ -14,7 +14,7 @@ interface NavProps {
 };
 
 const user: UserProps = {
-    name: "A. Stores",
+    name: "Alt Stores",
     avatar: "amazonstores.png"
 };
 
@@ -39,7 +39,7 @@ const TopBar = () => {
                         </button>
                     ))}
                 </div>
-                <div className="w-px h-8 relative" />
+                <div className="w-px h-8 relative border-neutral-200" />
                 <div className="space-x-4 flex items-center">
                     <p className="text-right text-slate-600 text-sm font-secondary leading-tight tracking-tight">
                         {user.name}

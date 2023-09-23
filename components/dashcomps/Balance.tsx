@@ -3,7 +3,7 @@ const AccBalance = () => {
     const cardNum: number = 5595;
 
     return (
-        <div className="bg-indigo-500 w-96 h-60 rounded-2xl">
+        <div className="bg-indigo-500 w-[100%] h-60 rounded-2xl">
             <div className="py-6 px-9">
                 <span className="w-full flex items-center justify-between">
                     <p className="text-white text-xs font-primary leading-tight">Available Balance</p>

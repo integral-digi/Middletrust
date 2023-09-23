@@ -16,7 +16,7 @@ const DashContact = () => {
     ];
 
     return (
-        <div className="w-max h-max space-y-6">
+        <div className="w-full h-max space-y-6">
             <div className="flex items-center justify-between w-[100%]">
                 <p className="text-slate-600 text-xl font-secondary tracking-tight">Send payment to</p>
                 <div className="w-6 h-6"><PlusSmallIcon /></div>

@@ -12,7 +12,7 @@ const quickInfo: DataProps[] = [
 
 const Quicklinks = () => {
     return (
-        <div className="w-max h-max relative space-y-6">
+        <div className="w-full h-max relative space-y-6">
             <div className="flex items-center justify-between">
                 <h3 className="text-slate-600 text-xl font-secondary tracking-tight">
                     Quicklinks
@@ -22,7 +22,7 @@ const Quicklinks = () => {
             <hr className="w-[100%] h-0.5 bg-neutral-100" />
             <div className="flex justify-between space-x-7">
                 {quickInfo.map((singleInfo) => (
-                    <div key={singleInfo.id} className={`${singleInfo.id === 2 ? "space-y-16 pl-5 pt-6 w-36 h-48 bg-indigo-500 text-white rounded-2xl" : "space-y-16 pl-5 pt-6 w-36 h-48 bg-neutral-100 rounded-2xl text-slate-600"}`}>
+                    <div key={singleInfo.id} className={`${singleInfo.id === 2 ? " space-y-20 pl-5 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "space-y-20 pl-5 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>
                         <p className="text-xl font-secondary">
                             {singleInfo.name}
                         </p>
