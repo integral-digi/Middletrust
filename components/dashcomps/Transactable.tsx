@@ -88,47 +88,47 @@ export const users: UserProps[] = [
 ];
 
 const Transactable = () => {
-  return (
-    <div className="space-y-6">
-      <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">Transaction History</h3>
-      <hr className="w-[100%] h-0.5 dark:bg-neutral-100" />
-      <div className="w-full h-max">
+    return (
         <div className="space-y-6">
-          {users.map((userData) => (
-            <div key={userData.id} className="gap-y-6 flex justify-between">
-              <div>
-                <Group className="space-x-6 flex items-center">
-                  <Popover data-popover-target={`right-flyout-${userData.id}`} className="">
-                    <Popover.Button>
-                      <img src={userData.avatar} alt={userData.name} className="w-12 h-12 rounded-full" />
-                    </Popover.Button>
-                    <Popover.Overlay className="fixed inset-0 bg-black opacity-30" />
-                    <Popover.Panel className="z-50 absolute top-0 right-0 h-screen" id={`right-flyout-${userData.id}`}>
-                      <RightFlyOut user={userData} />
-                    </Popover.Panel>
-                  </Popover>
-                  <div>
-                    <p className="text-slate-600 dark:text-white text-base font-secondary">{userData.name}</p>
-                    <p className="text-slate-600 dark:text-white text-xs font-primary">{userData.time}</p>
-                  </div>
-                </Group>
-              </div>
-              <div className="flex items-center top-0">
-                <div className="text-right">
-                  <p className="text-slate-600 dark:text-white text-base font-secondary">{formattedCurr(userData.amount)}</p>
-                </div>
+        <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">Transaction History</h3>
+        <hr className="w-[100%] h-0.5 dark:bg-neutral-100" />
+        <div className="w-full h-max">
+            <div className="space-y-6">
+            {users.map((userData) => (
+                <div key={userData.id} className="gap-y-6 flex justify-between">
                 <div>
-                  <div className="pl-6 h-3 w-auto">
-                    {userData.icon}
-                  </div>
+                    <Group className="space-x-6 flex items-center">
+                    <Popover data-popover-target={`right-flyout-${userData.id}`} className="">
+                        <Popover.Button >
+                        <img src={userData.avatar} alt={userData.name} className="w-12 h-12 rounded-full" />
+                        </Popover.Button>
+                        <Popover.Overlay className="fixed inset-0 bg-black opacity-30" />
+                        <Popover.Panel className="z-50 absolute top-0 right-0 h-screen" id={`right-flyout-${userData.id}`}>
+                            <RightFlyOut user={userData} />
+                        </Popover.Panel>
+                    </Popover>
+                    <div>
+                        <p className="text-slate-600 dark:text-white text-base font-secondary">{userData.name}</p>
+                        <p className="text-slate-600 dark:text-white text-xs font-primary">{userData.time}</p>
+                    </div>
+                    </Group>
                 </div>
-              </div>
+                <div className="flex items-center top-0">
+                    <div className="text-right">
+                    <p className="text-slate-600 dark:text-white text-base font-secondary">{formattedCurr(userData.amount)}</p>
+                    </div>
+                    <div>
+                    <div className="pl-6 h-3 w-auto">
+                        {userData.icon}
+                    </div>
+                    </div>
+                </div>
+                </div>
+            ))}
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  );
-};
+        </div>
+    );
+    };
 
-export default Transactable;
+    export default Transactable;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { formattedCurr } from "./Balances";
 
 const AccBalance = () => {
-  const balance: string = formattedCurr(5206);
+  const balance: number = 5206;
   const cardNum: number = 5595;
 
   const [showBalance, setShowBalance] = useState(true);
@@ -24,7 +24,7 @@ const AccBalance = () => {
         </span>
         <span>
           {showBalance ? (
-            <p className="mt-12 text-white text-5xl font-black">{balance}</p>
+            <p className="mt-12 text-white text-5xl font-black">{formattedCurr(balance)}</p>
           ) : (
             <p className="mt-12 text-white text-5xl font-black">*****</p>
           )}
