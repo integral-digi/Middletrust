@@ -20,7 +20,7 @@ const textStyle = "text-slate-600 dark:text-white text-xs font-primary leading-t
 
 const DashChart = () => {
     return (
-        <div className="w-full space-y-12 relative">
+        <div className="w-full space-y-8 relative">
             <div className="flex items-center justify-between">
                 <h3 className="text-slate-600 dark:text-white text-xl font-secondary tracking-tight">
                     Transaction Stats
@@ -31,8 +31,8 @@ const DashChart = () => {
             </div>
             <div className="left-0 flex items-center justify-between space-x-0">
                 <RadialBarChart
-                    width={280}
-                    height={248}
+                    width={240}
+                    height={240}
                     cx={128}
                     cy={128}
                     innerRadius={64}
