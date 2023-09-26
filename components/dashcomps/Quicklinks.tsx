@@ -1,3 +1,5 @@
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+
 interface DataProps {
     id: number;
     name: string;
@@ -17,12 +19,14 @@ const Quicklinks = () => {
                 <h3 className="text-slate-600 dark:text-white text-xl font-secondary tracking-tight">
                     Quicklinks
                 </h3>
-                <img src="lefticon.svg" className="" alt="left" />
+                <span className="w-4 h-4">
+                    <ChevronRightIcon />
+                </span>
             </div>
             <hr className="w-[100%] h-0.5 bg-neutral-100" />
-            <div className="flex justify-between space-x-7">
+            <div className="flex justify-between space-x-3">
                 {quickInfo.map((singleInfo) => (
-                    <div key={singleInfo.id} className={`${singleInfo.id === 2 ? " space-y-20 pl-5 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "space-y-20 pl-5 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>
+                    <div key={singleInfo.id} className={`${singleInfo.id === 2 ? "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>
                         <p className="text-xl font-secondary">
                             {singleInfo.name}
                         </p>
