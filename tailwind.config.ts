@@ -41,7 +41,8 @@ const config: Config = {
     },
   },
   plugins: [
-    require('@headlessui/tailwindcss')
+    require('@headlessui/tailwindcss'),
+    require('flowbite/plugin')
   ],
 };
 

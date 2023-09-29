@@ -12,7 +12,7 @@ const AccBalance = () => {
   };
 
   return (
-    <div className="bg-indigo-500 w-[100%] h-60 rounded-2xl">
+    <div className="bg-indigo-500 w-full h-60 rounded-2xl">
       <div className="py-6 px-9">
         <span className="w-full flex items-center justify-between">
           <p className="text-white text-xs font-primary leading-tight">
