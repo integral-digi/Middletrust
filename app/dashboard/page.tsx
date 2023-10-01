@@ -11,11 +11,11 @@ import DashContact from "@/components/dashcomps/UserContacts";
 
 const DashHome = () => {
     return (
-        <div className="w-full dark:bg-[#1E1A1A] dark:text-white lg:w-fit">
+        <div className="w-full dark:bg-[#1E1A1A] dark:text-white lg:w-fit relative">
             <div className="lg:hidden">
                 <SideNav />
             </div>
-            <div className="mx-auto relative py-6 w-fit lg:w-full lg:px-8">
+            <div className="mx-auto py-6 w-fit lg:w-full lg:px-8">
                 <div className="top-0 py-6 w-full">
                     <TopBar />
                 </div>

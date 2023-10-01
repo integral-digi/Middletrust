@@ -34,8 +34,10 @@ const SideNav = () => {
       <div key={link.label} onClick={() => handleLinkClick(index)} className='py-6'>
         <Tooltip
           animation="duration-1000"
+          style='light'
           placement='right'
-          content={link.label}>
+          content={link.label}
+          className='dark:bg-stone-900 dark:text-white font-primary w-max px-4 py-4 left-8'>
           <Link href={link.href}>
             <img src={link.icon} alt={link.label} className='w-6 h-6' />
           </Link>

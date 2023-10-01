@@ -1,7 +1,6 @@
 "use client"
 import { memo, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { Group } from "@mantine/core";
 import RightFlyOut from "./RightFlyOut";
 import { formattedCurr } from "./Balances";
 import LeftIcon from "@/public/images/Lefticon";
@@ -97,7 +96,7 @@ const Transactable = () => {
             {users.map((userData) => (
                 <div key={userData.id} className="gap-y-6 flex justify-between">
                 <div>
-                    <Group className="space-x-6 flex items-center">
+                    <div className="space-x-6 flex items-center">
                     <Popover data-popover-target={`right-flyout-${userData.id}`} className="">
                         <Popover.Button >
                         <img src={userData.avatar} alt={userData.name} className="w-12 h-12 rounded-full" />
@@ -121,7 +120,7 @@ const Transactable = () => {
                         <p className="text-slate-600 dark:text-white text-base font-secondary">{userData.name}</p>
                         <p className="text-slate-600 dark:text-white text-xs font-primary">{userData.time}</p>
                     </div>
-                    </Group>
+                    </div>
                 </div>
                 <div className="flex items-center top-0">
                     <div className="text-right">

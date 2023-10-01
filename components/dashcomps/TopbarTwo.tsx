@@ -18,30 +18,6 @@ interface NavProps {
   class: string;
 };
 
-const checkTime = (currentHour?: number) => {
-  // Handle the case where currentHour is undefined.
-  if (currentHour === undefined) {
-    return "Day";
-  }
-
-  if (currentHour >= 1 && currentHour < 12) {
-    return "Morning";
-  } else if (currentHour >= 12 && currentHour < 17) {
-    return "Afternoon";
-  } else {
-    return "Evening";
-  }
-};
-
-const currentTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-const currentHour = new Date().getHours(); // Get the current hour of the day
-
-const timeOfDay = checkTime(currentHour);
-
-console.log(`In the time zone ${currentTimeZone}, it is currently ${timeOfDay}.`);
-
-
-
 export const user: UserProps = {
   name: "Efe",
   avatar: "amazonstores.png",
@@ -53,8 +29,11 @@ export const navItems: NavProps[] = [
   { name: "notify", icon: <NotifyIcon />, class: "w-6 h-6 relative" },
 ];
 
-const TopBar = () => {
-  const greeting = false;
+interface TopBarTwoProps {
+    currentTitle: string;
+};
+  
+  const TopBarTwo: React.FC<TopBarTwoProps> = ({ currentTitle }) => {
   const memoNavItems = useMemo(() => {
     return navItems.map((item, index) => (
       <button key={index} className={item.class}>
@@ -79,14 +58,15 @@ const TopBar = () => {
       </button>
     ));
   }, [navItems]);
+  
 
   return (
     <div className="flex items-center w-full h-12 relative justify-between">
       <div className="flex items-center gap-5">
+        <img src="righticon.svg" alt="left" className="w-6 h-6" />
         <h2 className="text-slate-600 dark:text-white text-5xl font-black lg:text-3xl">
-          Good {timeOfDay}, {user.name}
+          {currentTitle}
         </h2>
-        <img src="wave.svg" alt="waving" className="w-12 h-12" />
       </div>
       <div className="flex items-center space-x-6">
         <div className="space-x-6 lg:hidden">
@@ -122,4 +102,4 @@ const TopBar = () => {
   );
 };
 
-export default TopBar;
+export default TopBarTwo;

@@ -1,3 +1,5 @@
+"use client"
+import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface DataProps {
@@ -26,15 +28,16 @@ const Quicklinks = () => {
             <hr className="w-[100%] h-0.5 bg-neutral-100" />
             <div className="flex justify-between space-x-3">
                 {quickInfo.map((singleInfo) => (
-                    <div key={singleInfo.id} className={`${singleInfo.id === 2 ? "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>
-                        <p className="text-xl font-secondary">
-                            {singleInfo.name}
-                        </p>
-                        <img 
-                            src={singleInfo.icon} 
-                            className="w-9 h-8 relative" 
-                            alt={singleInfo.name} />
-                    </div>
+                        <Link href={singleInfo.name.toLowerCase()} key={singleInfo.id} className={`${singleInfo.id === 2 ? "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>
+                            <p className="text-xl font-secondary">
+                                {singleInfo.name}
+                            </p>
+                            <img 
+                                src={singleInfo.icon} 
+                                className="w-9 h-8 relative" 
+                                alt={singleInfo.name} />
+                        </Link>
+                    
                 ))}
             </div>
         </div>
