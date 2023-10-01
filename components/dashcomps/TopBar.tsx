@@ -18,7 +18,7 @@ interface NavProps {
 };
 
 const checkTime = (currentHour?: number) => {
-  // Handle the case where currTime is undefined.
+  // Handle the case where currentHour is undefined.
   if (currentHour === undefined) {
     return "Day";
   }

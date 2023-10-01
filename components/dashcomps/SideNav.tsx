@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Tooltip } from 'flowbite-react';
 import Link from 'next/link';
 
 interface NavbarLinkProps {
@@ -13,7 +14,7 @@ const navData: NavbarLinkProps[] = [
   { icon: "Withdrawal.svg", label: 'Withdraw Funds', href: "/withdrawal" },
   { icon: "Summary.svg", label: 'Releases', href: "/transactions" },
   { icon: "Trustlinkdash.svg", label: 'Trustlink', href: "/trustlink" },
-  { icon: "Profile.svg", label: 'Account', href: "/account" },
+  { icon: "Profile.svg", label: 'Account', href: "/account" }
 ];
 
 const navDataTwo: NavbarLinkProps[] = [
@@ -31,9 +32,14 @@ const SideNav = () => {
   const renderLinks = (links: NavbarLinkProps[]) => {
     return links.map((link, index) => (
       <div key={link.label} onClick={() => handleLinkClick(index)} className='py-6'>
-        <Link href={link.href}>
-          <img src={link.icon} alt={link.label} className='w-6 h-6' />
-        </Link>
+        <Tooltip
+          animation="duration-1000"
+          placement='right'
+          content={link.label}>
+          <Link href={link.href}>
+            <img src={link.icon} alt={link.label} className='w-6 h-6' />
+          </Link>
+        </Tooltip>
       </div>
     ));
   };
