@@ -15,7 +15,7 @@ const escrowBal: string = formattedCurr(30489);
 
 const BalanceAndLimits = () => {
     return (
-        <div className="w-[100%] space-y-12">
+        <div className="w-full space-y-12">
             <div className="w-full space-y-5">
                 <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">
                     Monthly Transaction Limit
@@ -24,7 +24,7 @@ const BalanceAndLimits = () => {
                     <Limiter bgcolor="#6A5ACD" progress='30'  height={8} />
                 </div>
             </div>
-            <div className="w-[100%]">
+            <div className="w-full">
                 <div className="flex items-center space-x-5">
                     <div className="flex items-center pl-4 space-x-8 bg-transparent rounded-2xl border-2 border-neutral-100 w-60 h-24">
                         <img src="categories.svg" alt="category icon" className="" />

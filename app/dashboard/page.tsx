@@ -32,7 +32,7 @@ const DashHome = () => {
                         <DashContact />
                         <Quicklinks />
                     </div>
-                <div className="absolute hidden shadow lg:block">
+                <div className="absolute w-full hidden shadow lg:block">
                     <BottomNav />
                 </div>
                 </div>

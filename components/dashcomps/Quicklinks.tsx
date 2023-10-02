@@ -25,7 +25,7 @@ const Quicklinks = () => {
                     <ChevronRightIcon />
                 </span>
             </div>
-            <hr className="w-[100%] h-0.5 bg-neutral-100" />
+            <hr className="w-full h-0.5 bg-neutral-100" />
             <div className="flex justify-between space-x-3">
                 {quickInfo.map((singleInfo) => (
                         <Link href={singleInfo.name.toLowerCase()} key={singleInfo.id} className={`${singleInfo.id === 2 ? "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>

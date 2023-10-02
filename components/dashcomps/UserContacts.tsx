@@ -20,7 +20,7 @@ const DashContact = () => {
                 <h3 className="text-slate-600 dark:text-white text-xl font-secondary tracking-tight">Send payment to</h3>
                 <div className="w-6 h-6"><PlusSmallIcon /></div>
             </div>
-            <hr className="w-[100%] h-0.5 dark:bg-neutral-100" />
+            <hr className="w-full h-0.5 dark:bg-neutral-100" />
             <div className="grid grid-cols-4 w-[100%] gap-x-12">
                 {userContacts.map((contact, index) => (
                     <div key={index} className="block justify-center space-y-7">

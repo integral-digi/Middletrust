@@ -1,9 +1,10 @@
+import { useEffect, useState } from "react";
+
 interface userInfoProps {
     name: string;
     bank: string;
     accNum: number;
     routing: number;
-    serviceCharge: number;
 }
 
 const userInfo: userInfoProps = {
@@ -11,7 +12,6 @@ const userInfo: userInfoProps = {
     bank: "Silvergate Bank",
     accNum: 7787778877,
     routing: 60779018,
-    serviceCharge: 0
 };
 
 const withdrawLabels: string[] = [
@@ -23,7 +23,45 @@ const withdrawLabels: string[] = [
     "Service Charge"
 ];
 
+const serviceCharge: number = 0;
+
+
+
 
 const InfoBar = () => {
+    const pStyle: string = "text-slate-600 text-base font-primary dark:text-white";
+    const pStyleTwo: string = "text-right text-slate-600 text-base font-secondary dark:text-white";
 
-}
+   return (
+    <div className="w-full space-y-12">
+        <span className="flex items-center justify-between">
+            <p className={pStyle}>{withdrawLabels[0]}</p>
+            <p className={pStyleTwo}>tbd</p>
+        </span>
+        <span className="flex items-center justify-between">
+            <p className={pStyle}>{withdrawLabels[1]}</p>
+            <p className={pStyleTwo}>{userInfo.name}</p>
+        </span>
+        <span className="flex items-center justify-between">
+            <p className={pStyle}>{withdrawLabels[2]}</p>
+            <p className={pStyleTwo}>{userInfo.bank}</p>
+        </span>
+        <span className="flex items-center justify-between">
+            <p className={pStyle}>{withdrawLabels[3]}</p>
+            <p className={pStyleTwo}>{userInfo.accNum}</p>
+        </span>
+        <span className="flex items-center justify-between">
+            <p className={pStyle}>{withdrawLabels[4]}</p>
+            <p className={pStyleTwo}>{userInfo.routing}</p>
+        </span>
+        <hr className="w-full h-px bg-zinc-300" />
+        <span className="flex items-center justify-between">
+            <p className={pStyle}>{withdrawLabels[5]}</p>
+            <p className={pStyleTwo}>{serviceCharge}</p>
+        </span>
+    </div>
+
+   )
+};
+
+export default InfoBar;

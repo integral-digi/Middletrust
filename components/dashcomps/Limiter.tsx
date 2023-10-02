@@ -14,8 +14,7 @@ const Limiter = ({bgcolor, progress, height}: any) => {
 		backgroundColor: bgcolor,
 	    borderRadius: 40,
 	}
-
-		
+	
 	return (
         <div className='' style={Parentdiv}>
             <div style={Childdiv} />

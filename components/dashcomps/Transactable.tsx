@@ -90,7 +90,7 @@ const Transactable = () => {
     return (
         <div className="space-y-6">
         <h3 className="dark:text-white text-slate-600 text-xl font-secondary tracking-tight">Transaction History</h3>
-        <hr className="w-[100%] h-0.5 dark:bg-neutral-100" />
+        <hr className="w-full h-0.5 dark:bg-neutral-100" />
         <div className="w-full h-max">
             <div className="space-y-6">
             {users.map((userData) => (
