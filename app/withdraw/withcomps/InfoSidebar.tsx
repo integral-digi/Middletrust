@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { formattedCurr } from "@/components/dashcomps/Balances";
 
 interface userInfoProps {
     name: string;
@@ -23,6 +23,8 @@ const withdrawLabels: string[] = [
     "Service Charge"
 ];
 
+const withdrawAmt = 300;
+
 const serviceCharge: number = 0;
 
 
@@ -36,7 +38,7 @@ const InfoBar = () => {
     <div className="w-full space-y-12">
         <span className="flex items-center justify-between">
             <p className={pStyle}>{withdrawLabels[0]}</p>
-            <p className={pStyleTwo}>tbd</p>
+            <p className={pStyleTwo}>{formattedCurr(withdrawAmt)}</p>
         </span>
         <span className="flex items-center justify-between">
             <p className={pStyle}>{withdrawLabels[1]}</p>
@@ -59,6 +61,11 @@ const InfoBar = () => {
             <p className={pStyle}>{withdrawLabels[5]}</p>
             <p className={pStyleTwo}>{serviceCharge}</p>
         </span>
+        <div className="pt-16">
+            <button className="h-12 w-full bg-indigo-500 rounded-lg justify-center flex items-center">
+                <p className="w-max text-center text-white text-base font-black">Continue</p>
+            </button>
+        </div>
     </div>
 
    )

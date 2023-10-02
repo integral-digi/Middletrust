@@ -9,10 +9,10 @@ interface NavbarLinkProps {
 }
 
 const navData: NavbarLinkProps[] = [
-  { icon: "Home.svg", label: 'Home', href: "/home" },
-  { icon: "Transaction.svg", label: 'Deposit Funds', href: "/deposits" },
-  { icon: "Withdrawal.svg", label: 'Withdraw Funds', href: "/withdrawal" },
-  { icon: "Summary.svg", label: 'Releases', href: "/transactions" },
+  { icon: "Home.svg", label: 'Home', href: "/dashboard" },
+  { icon: "Transaction.svg", label: 'Deposit Funds', href: "/deposit" },
+  { icon: "Withdrawal.svg", label: 'Withdraw Funds', href: "/withdraw" },
+  { icon: "Summary.svg", label: 'transactions', href: "/transactions" },
   { icon: "Trustlinkdash.svg", label: 'Trustlink', href: "/trustlink" },
   { icon: "Profile.svg", label: 'Account', href: "/account" }
 ];
