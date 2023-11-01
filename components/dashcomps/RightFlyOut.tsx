@@ -21,13 +21,13 @@ const RightFlyOut = ({ user }: { user: UserProps }) => {
     const divStyle: string = "flex items-center justify-between";
 
     return (
-        <div className="bg-white dark:bg-[#1E1A1A] px-16 pt-16 pb-96 w-fit h-max z-50 space-y-7 relative">
+        <div className="bg-white dark:bg-[#1E1A1A] px-16 pt-16 pb-80 w-fit h-full z-50 space-y-7 relative">
             <h1 className="text-slate-600 dark:text-white text-xl font-secondary">Trustee Insight</h1>
             <hr className="w-full h-px border border-gray-300" />
                 <div key={user.id} className="mt-6 space-y-7">
                     <div className="relative">
                         <img src={user.avatar} alt={user.name} className="w-28 h-28 rounded-full" />
-                        <img src="verify.svg" alt="verified" className="cursor-pointer absolute left-[92px] bottom-4" />
+                        {user.isVerified ? <img src="verify.svg" alt="verified" className="absolute left-[92px] bottom-4 cursor-pointer" /> : null}
                     </div>
                     <div className={divStyle}>
                         <p className="text-slate-600 dark:text-white text-sm font-secondary">{spanLabels[0]}</p>

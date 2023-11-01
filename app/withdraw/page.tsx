@@ -25,6 +25,6 @@ const WithdrawHome = () => {
       </div>
     </div>
   );
-};
+}
 
 export default WithdrawHome;
