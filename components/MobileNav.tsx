@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import NavTwo from "./NavTwo";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const mainLogo = [
     "midicon.svg",

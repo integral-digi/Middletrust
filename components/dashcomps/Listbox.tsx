@@ -26,7 +26,7 @@ const ChartDropdown = () => {
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1">
-            <Listbox.Options className="absolute z-10 shadow bg-white w-max h-fit px-5 space-y-2 py-6">
+            <Listbox.Options className="absolute z-10 shadow bg-white w-max h-fit px-5 space-y-2 py-6 cursor-pointer">
             {sortOptions.map((sortOption) => (
                 <Listbox.Option
                 key={sortOption.id}

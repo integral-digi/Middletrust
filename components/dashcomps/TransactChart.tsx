@@ -12,7 +12,7 @@ const transactionTotal: number = 59485;
 
 const summaryData: SummaryDataProps[] = [
     { name: "Total Inflows", amount: 43234, fill: "#6A5ACD" },
-    { name: "Withdrawals", amount: 22125, fill: "#0BB5FA" },
+    { name: "Withdrawals", amount: 4872, fill: "#0BB5FA" },
     { name: "Total Outflows", amount: 11379, fill: "#0BB5FA" },
 ];
 

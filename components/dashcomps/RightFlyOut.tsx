@@ -1,8 +1,8 @@
 import { useMemo } from "react";
-import { users } from "./Transactable";
-import { UserProps } from "./Transactable";
+import { users } from "@/app/transactions/components/TransactionData";
+import { UserProps } from "@/app/transactions/components/TransactionData";
 import { formattedCurr } from "./Balances";
-
+import { Tooltip } from "flowbite-react";
 
 
 
@@ -21,13 +21,21 @@ const RightFlyOut = ({ user }: { user: UserProps }) => {
     const divStyle: string = "flex items-center justify-between";
 
     return (
-        <div className="bg-white dark:bg-[#1E1A1A] px-16 pt-16 pb-80 w-fit h-full z-50 space-y-7 relative">
-            <h1 className="text-slate-600 dark:text-white text-xl font-secondary">Trustee Insight</h1>
-            <hr className="w-full h-px border border-gray-300" />
-                <div key={user.id} className="mt-6 space-y-7">
+        <div className="bg-white dark:bg-[#1E1A1A] h-full">
+            <div className="relative px-16 pt-16 pb-80 w-fit h-full z-50 space-y-7">
+                <h1 className="text-slate-600 dark:text-white text-xl font-secondary">Trustee Insight</h1>
+                <hr className="w-full h-px border border-gray-300" />
+                <div className="mt-6 space-y-7">
                     <div className="relative">
                         <img src={user.avatar} alt={user.name} className="w-28 h-28 rounded-full" />
-                        {user.isVerified ? <img src="verify.svg" alt="verified" className="absolute left-[92px] bottom-4 cursor-pointer" /> : null}
+                        <Tooltip
+                            animation="duration-1000"
+                            style='light'
+                            placement='bottom'
+                            content={`${user.name} is verified`}
+                            className='dark:bg-stone-900 dark:text-white font-primary w-max px-4 py-4 ml-24'>
+                            {user.isVerified ? <img src="verify.svg" alt="verified" className="absolute left-[92px] bottom-4 cursor-pointer" /> : null}
+                        </Tooltip>
                     </div>
                     <div className={divStyle}>
                         <p className="text-slate-600 dark:text-white text-sm font-secondary">{spanLabels[0]}</p>
@@ -77,6 +85,7 @@ const RightFlyOut = ({ user }: { user: UserProps }) => {
                         </p>
                     </div>
                 </div>
+            </div>
         </div>
     );
 };

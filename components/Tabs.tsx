@@ -16,7 +16,7 @@ const DevOptions = () => {
                     <Tab className="px-2 py-1 ui-selected:bg-[#1E1A1A] ui-selected:text-white ui-selected:rounded-[50px] ui-selected:px-4">Golang</Tab>
                     <Tab className="px-2 py-1" disabled>Java</Tab>
                 </Tab.List>
-                <Tab.Panels className="font-mono w-max pt-[24px] sm:mx-auto sm:w-[338px] pr-8">
+                <Tab.Panels className="font-mono w-max pt-6 sm:mx-auto sm:w-[338px] pr-8">
                     <Tab.Panel>
                         {codeNode}
                     </Tab.Panel>

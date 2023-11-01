@@ -4,6 +4,7 @@ import DarkToggler from "../DarkToggler";
 import NotifyIcon from "@/public/images/Notify";
 import { useMemo, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
+import { timeOfDay } from "@/src/time";
 import AccDropdown from "./AccountDropdown";
 import SearchModal from "./Search";
 
@@ -18,30 +19,6 @@ interface NavProps {
   class: string;
 };
 
-const checkTime = (currentHour?: number) => {
-  // Handle the case where currentHour is undefined.
-  if (currentHour === undefined) {
-    return "Day";
-  }
-
-  if (currentHour >= 1 && currentHour < 12) {
-    return "Morning";
-  } else if (currentHour >= 12 && currentHour < 17) {
-    return "Afternoon";
-  } else {
-    return "Evening";
-  }
-};
-
-const currentTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-const currentHour = new Date().getHours(); // Get the current hour of the day
-
-const timeOfDay = checkTime(currentHour);
-
-console.log(`In the time zone ${currentTimeZone}, it is currently ${timeOfDay}.`);
-
-
-
 export const user: UserProps = {
   name: "Efe",
   avatar: "amazonstores.png",
@@ -54,7 +31,6 @@ export const navItems: NavProps[] = [
 ];
 
 const TopBar = () => {
-  const greeting = false;
   const memoNavItems = useMemo(() => {
     return navItems.map((item, index) => (
       <button key={index} className={item.class}>

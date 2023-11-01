@@ -20,7 +20,7 @@ const Home = () => {
         {/*Head Supposedly goes here */}
       </Head>
       {/* Body begin below */}
-      <body className="block w-full font-primary overflow-x-hidden mx-auto bg-white dark:bg-[#1E1A1A] lg:mx-auto lg:overflow-x-hidden">
+      <body className="block w-full h-full font-primary overflow-x-hidden mx-auto bg-white dark:bg-[#1E1A1A] lg:mx-auto lg:overflow-x-hidden">
         <Announce />
         <MobileNav />
         <NavBar />

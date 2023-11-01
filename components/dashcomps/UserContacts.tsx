@@ -7,11 +7,25 @@ interface DashProps {
 }
 
 const userContacts: DashProps[] = [
-    { name: "Jane D", photo: "user 1.jpg", href: "#" },
-    { name: "Daniel R", photo: "user 2.jpg", href: "#" },
-    { name: "Leah M", photo: "user 5.jpg", href: "#" },
-    { name: "Nick L", photo: "user 3.jpg", href: "#" },
+    { name: "Jane Diazzarhihia", photo: "user 1.jpg", href: "#" },
+    { name: "Daniel Reghan", photo: "user 2.jpg", href: "#" },
+    { name: "Leah Melonie", photo: "user 5.jpg", href: "#" },
+    { name: "Nick Lentz", photo: "user 3.jpg", href: "#" },
 ];
+
+const formattedContacts: string[] = [];
+
+const ReturnUser = (userContacts: DashProps[]) => {
+    for(let i = 0; i < userContacts.length; i++) {
+        if(userContacts[i].name.length > 8) {
+                formattedContacts.push(userContacts[i].name.slice(0,9))
+        } else {
+            formattedContacts.push(userContacts[i].name)
+        }
+    }
+};
+
+console.log(formattedContacts);
 
 const DashContact = () => {
     return (
@@ -29,7 +43,9 @@ const DashContact = () => {
                             alt={contact.name}
                             className="w-16 h-16 rounded-full border-4 border-gray-300 items-center mx-auto"
                         />
-                        <p className="text-center text-slate-600 dark:text-white text-base font-primary relative">{contact.name}</p>
+                        {formattedContacts.map((entry, index) => (
+                            <p key={index} className="text-center text-slate-600 dark:text-white text-base font-primary relative">{entry}</p>
+                        ))}
                     </div>
                 ))}
             </div>
