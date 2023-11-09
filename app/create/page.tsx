@@ -24,7 +24,7 @@ const CreateTx = () => {
             </div>
             <div className="mx-auto py-6 w-[64%] lg:w-full lg:px-8">
                 <div className="top-0 py-6 w-full">
-                    <TopBarTwo currentTitle="new transaction" />
+                    <TopBarTwo currentTitle="create" />
                 </div>
                 <div className="block pt-8 space-y-24 w-full">
                     {formId === 1 ? (

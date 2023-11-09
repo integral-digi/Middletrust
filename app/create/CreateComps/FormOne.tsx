@@ -69,15 +69,15 @@ const FormOne = ({ id, click }: any) => {
             </section>
             <section className={sectionStyle}>
                 <p className={pStyle}>{formLabels.inputTwo}</p>
-                <input className={inputStyle} type="text" />
+                <input className={inputStyle} type="text" required />
             </section>
             <section className={sectionStyle}>
                 <p className={pStyle}>{formLabels.inputThree}</p>
-                <textarea className={textAreaStyle} />
+                <textarea className={textAreaStyle} required />
             </section>
             <section className={sectionStyle}>
                 <p className={pStyle}>{formLabels.inputFour}</p>
-                <textarea className={textAreaStyle} />
+                <textarea className={textAreaStyle} required />
             </section>
             <section className="flex items-center space-x-7">
                 <button className="text-white text-lg font-secondary bg-orange-400 w-40 h-14 rounded-md">Back</button>

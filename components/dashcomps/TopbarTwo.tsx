@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from "next/router";
 import { useMemo, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import SearchIcon from "@/public/images/SearchIcon";
@@ -7,6 +6,7 @@ import DarkToggler from "../DarkToggler";
 import NotifyIcon from "@/public/images/Notify";
 import AccDropdown from "./AccountDropdown";
 import SearchModal from "./Search";
+import GoBackButton from "./GoBack";
 
 interface UserProps {
   name: string;
@@ -67,11 +67,7 @@ const TopBarTwo: React.FC<TopBarTwoProps> = ({ currentTitle }) => {
   return (
     <div className="flex items-center w-full h-12 relative justify-between">
       <div className="flex items-center gap-5">
-        <img
-          src="righticon.svg"
-          alt="left"
-          className="w-6 h-6"
-        />
+        <GoBackButton />
         <h2 className="text-slate-600 dark:text-white text-5xl font-black lg:text-3xl">
           {currentTitle}
         </h2>

@@ -15,15 +15,15 @@ const FormTwo = ({id, click, goBack}: any) => {
             </section>
             <section className={sectionStyle}>
                 <p className={pStyle}>{formLabels.inputFive}</p>
-                <input className={inputStyle} type="number" />
+                <input className={inputStyle} type="number" required  />
             </section>
             <section className={sectionStyle}>
                 <p className={pStyle}>{formLabels.inputSix}</p>
-                <input className={inputStyle} type="number" />
+                <input className={inputStyle} type="number" required  />
             </section>
             <section className={sectionStyle}>
                 <p className={pStyle}>{formLabels.inputSeven}</p>
-                <input type="date" className={`${inputStyle} dark:text-white`} />
+                <input type="date" className={`${inputStyle} dark:text-white`} required />
             </section>
             <section className="flex items-center space-x-7">
                 <button className="text-white text-lg font-secondary bg-orange-400 w-40 h-14 rounded-md"onClick={goBack}>Back</button>

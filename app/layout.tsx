@@ -1,6 +1,7 @@
 "use client";
 import './globals.css';
 // import type { Metadata } from 'next';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 const metadata = {
@@ -13,6 +14,7 @@ interface RootLayoutProps {
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+
   return (
     <html lang="en" className='h-full overflow-x-hidden bg-white dark:bg-[#1E1A1A]'>
       <Head>
