@@ -7,7 +7,7 @@ const FormTwo = ({id, click, goBack}: any) => {
     return (
         <div className="w-full space-y-10">
             <section className="space-y-12 w-[70%]">
-                <Limiter bgcolor="#6A5ACD" progress="67"  height={10} />
+                <Limiter bgcolor="#6A5ACD" progress="67"  height={8} />
                 <section className="space-y-2">
                     <p className="text-slate-600 text-2xl font-secondary dark:text-white">Product Details</p>
                     <p className="text-slate-600 text-lg font-secondary dark:text-white">Please provide us with all details regarding this product</p>

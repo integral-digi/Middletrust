@@ -1,4 +1,3 @@
-
 import { formattedCurr } from "@/components/dashcomps/Balances";
 
 interface userInfoProps {

@@ -3,6 +3,7 @@ import { users } from "@/app/transactions/components/TransactionData";
 import { UserProps } from "@/app/transactions/components/TransactionData";
 import { formattedCurr } from "./Balances";
 import { Tooltip } from "flowbite-react";
+import Link from "next/link";
 
 
 
@@ -79,7 +80,7 @@ const RightFlyOut = ({ user }: { user: UserProps }) => {
                         <p className="text-slate-600 dark:text-white text-sm font-secondary">
                         Would you like to create a{" "}
                         <span className="text-indigo-500 underline cursor-pointer">
-                            new transaction
+                            <Link href="/create">new transaction</Link>
                         </span>{" "}
                         with this user?
                         </p>

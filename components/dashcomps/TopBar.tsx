@@ -21,7 +21,7 @@ interface NavProps {
 
 export const user: UserProps = {
   name: "Efe",
-  avatar: "amazonstores.png",
+  avatar: "/images/efe.jpg",
 };
 
 export const navItems: NavProps[] = [

@@ -19,7 +19,7 @@ const FormThree = ({id, goBack}: any) => {
     return (
         <div className="w-full space-y-10">
             <section className="space-y-12 w-[70%]">
-                <Limiter bgcolor="#6A5ACD" progress="100"  height={10} />
+                <Limiter bgcolor="#6A5ACD" progress="100"  height={8} />
                 <section className="space-y-2">
                     <p className="text-slate-600 text-2xl font-secondary dark:text-white">Payment Plan</p>
                     <p className="text-slate-600 text-lg font-secondary dark:text-white">Please provide us with the payment specifics</p>

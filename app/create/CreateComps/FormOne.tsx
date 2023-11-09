@@ -4,9 +4,9 @@ import Limiter from "@/components/dashcomps/Limiter";
 
 export const sectionStyle: string = "w-[70%] space-y-7";
 export const pStyle: string = "text-slate-600 dark:text-white text-base font-secondary";
-export const inputStyle: string = "w-full rounded-md border border-gray-300 bg-transparent h-12 font-primary";
-export const textAreaStyle: string = "w-full rounded-md border border-gray-300 bg-transparent h-20 font-primary";
-export const radioStyle: string = "text-slate-600 text-lg font-book";
+export const inputStyle: string = "w-full rounded-md border border-gray-300 dark:border-slate-600 bg-transparent h-12 font-primary";
+export const textAreaStyle: string = "w-full rounded-md border border-gray-300 dark:border-slate-600 bg-transparent h-20 font-primary";
+export const radioStyle: string = "text-indigo-500 text-lg font-book";
 export const formLabels = {
     inputOne: "What's your role in this transaction?",
     inputTwo: "What would be a suitable title for this transaction?",
@@ -15,7 +15,7 @@ export const formLabels = {
     inputFive: "How much does the product cost?",
     inputSix: "How much is the shipping fee?",
     inputSeven: "When is the agreed date for delivery?",
-    inputEight: "Is there a penalty fee attached, in case the seller fails to make early delivery? If yes, how much? If No, leave it at 0",
+    inputEight: "Is there a penalty fee attached, in case the seller fails to make early delivery? If yes, how much? If no, leave it at 0",
     inputNine: "How often should we deduct the agreed penalty fee?",
     inputTen: "What will pay the transaction fee?",
 };
@@ -30,7 +30,7 @@ const FormOne = ({ id, click }: any) => {
     return (
         <div className="w-full space-y-10">
             <section className="space-y-12 w-[70%]">
-                <Limiter bgcolor="#6A5ACD" progress="33" height={10} />
+                <Limiter bgcolor="#6A5ACD" progress="33" height={8} />
                 <section className="space-y-2">
                     <p className="text-slate-600 text-2xl font-secondary dark:text-white">Basic Transaction Details</p>
                     <p className="text-slate-600 text-lg font-secondary dark:text-white">Please provide us with all details regarding this contract</p>
