@@ -1,6 +1,6 @@
 //importing user and icons
 import { Fragment } from "react";
-import { user } from "./TopBar";
+import { user } from "@/app/account/AccComps/UserData";
 import Burger from "@/public/images/Burger";
 import { navItems } from "./TopBar";
 import { Popover, Transition } from "@headlessui/react";
@@ -54,7 +54,7 @@ const BottomNav = () => {
                   <Popover data-popover-target="AccDrop" className="relative lg:hidden">
                     <Popover.Button className="relative">
                       <div className="w-8 h-8 rounded-full border-2 border-zinc-200">
-                        <img src={user.avatar} alt={user.name} className="w-8 h-auto rounded-full mx-auto my-auto" />
+                        <img src={user.avatar} alt={user.username} className="w-8 h-auto rounded-full mx-auto my-auto" />
                       </div>
                     </Popover.Button>
                     <Transition

@@ -1,6 +1,7 @@
 "use client"
 import { useMemo, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
+import { user } from "@/app/account/AccComps/UserData";
 import SearchIcon from "@/public/images/SearchIcon";
 import DarkToggler from "../DarkToggler";
 import NotifyIcon from "@/public/images/Notify";
@@ -8,21 +9,11 @@ import AccDropdown from "./AccountDropdown";
 import SearchModal from "./Search";
 import GoBackButton from "./GoBack";
 
-interface UserProps {
-  name: string;
-  avatar: string;
-}
-
 interface NavProps {
   name: string;
   icon: JSX.Element;
   class: string;
 }
-
-export const user: UserProps = {
-  name: "Efe",
-  avatar: "/images/efe.jpg",
-};
 
 export const navItems: NavProps[] = [
   { name: "dark", icon: <DarkToggler />, class: "w-6 h-6 relative" },
@@ -77,14 +68,14 @@ const TopBarTwo: React.FC<TopBarTwoProps> = ({ currentTitle }) => {
         <div className="w-px h-8 relative border-neutral-200" />
         <div className="space-x-4 flex items-center">
           <p className="text-right text-slate-600 dark:text-white text-sm font-secondary leading-tight tracking-tight lg:hidden">
-            {user.name}
+            {user.username}
           </p>
           <Popover data-popover-target="AccDrop" className="relative lg:hidden">
             <Popover.Button className="relative">
               <div className="w-12 h-12 rounded-full border-2 border-zinc-200">
                 <img
                   src={user.avatar}
-                  alt={user.name}
+                  alt={user.username}
                   className="w-11 h-auto rounded-full mx-auto my-auto"
                 />
               </div>

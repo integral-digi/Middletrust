@@ -22,10 +22,35 @@ const PersonalSettings = () => {
     const handleAddChange = (event: any) => {
         setAddress(event.target.value)
     }
+    const [fileUpload, setFileUpload] = useState(null);
+    const handleFileUpload = (event: any) => {
+        const selectedFile = event.target.files[0];
+    
+        if (selectedFile) {
+          // You can perform additional validation here, such as file type and size.
+          // For simplicity, we'll assume any selected file is a valid image.
+          
+          // Display the selected avatar in the component
+          const reader = new FileReader();
+          reader.onload = () => {
+            setFileUpload(reader.result);
+          };
+          reader.readAsDataURL(selectedFile);
+        }
+      };
+    }
     return (
         <div className="w-[70%] min-h-screen space-y-16">
             <section className="space-y-8 w-full">
-                <img src={user.avatar} alt={user.username} className="w-24 h-24 rounded-full" />
+                <section className="w-24 h-24 object-cover relative">
+                    <img src={user.avatar} alt={user.username} className="w-full h-full rounded-full" />
+                    <section className="bg-neutral-100 w-6 h-6 rounded-full flex items-center absolute bottom-0 right-0 cursor-pointer">
+                        <label htmlFor="avatarUploader" className="mx-auto cursor-pointer">
+                            <img src="camera.svg" alt="upload" className="w-4 h-4" />
+                        </label>
+                        <input type="file" accept="image" className="hidden" id="avatarUploader" onChange={handleFileUpload} />
+                    </section>
+                </section>
                 <section className={sectionStyle}>
                     <p className={pStyle}>Username</p>
                     <section className="relative">

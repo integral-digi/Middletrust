@@ -1,6 +1,6 @@
 export const user = {
-    avatar: "/images/efe.jpg",
-    username: "Efe",
+    avatar: "user 1.jpg",
+    username: "Integral",
     firstName: "Efe",
     lastName: "Ojadua",
     email: "efeojadua@yahoo.com",

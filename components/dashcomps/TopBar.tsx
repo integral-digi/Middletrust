@@ -5,23 +5,14 @@ import NotifyIcon from "@/public/images/Notify";
 import { useMemo, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { timeOfDay } from "@/src/time";
+import { user } from "@/app/account/AccComps/UserData";
 import AccDropdown from "./AccountDropdown";
 import SearchModal from "./Search";
-
-interface UserProps {
-  name: string;
-  avatar: string;
-};
 
 interface NavProps {
   name: string;
   icon: JSX.Element;
   class: string;
-};
-
-export const user: UserProps = {
-  name: "Efe",
-  avatar: "/images/efe.jpg",
 };
 
 export const navItems: NavProps[] = [
@@ -60,7 +51,7 @@ const TopBar = () => {
     <div className="flex items-center w-full h-12 relative justify-between">
       <div className="flex items-center gap-5">
         <h2 className="text-slate-600 dark:text-white text-5xl font-black lg:text-3xl">
-          Good {timeOfDay}, {user.name}
+          Good {timeOfDay}, {user.username}
         </h2>
         <img src="wave.svg" alt="waving" className="w-12 h-12" />
       </div>
@@ -71,12 +62,12 @@ const TopBar = () => {
         <div className="w-px h-8 relative border-neutral-200" />
         <div className="space-x-4 flex items-center">
           <p className="text-right text-slate-600 dark:text-white text-sm font-secondary leading-tight tracking-tight lg:hidden">
-            {user.name}
+            {user.username}
           </p>
           <Popover data-popover-target="AccDrop" className="relative lg:hidden">
             <Popover.Button className="relative">
               <div className="w-12 h-12 rounded-full border-2 border-zinc-200">
-                <img src={user.avatar} alt={user.name} className="w-11 h-auto rounded-full mx-auto my-auto" />
+                <img src={user.avatar} alt={user.username} className="w-11 h-auto rounded-full mx-auto my-auto" />
               </div>
             </Popover.Button>
             <Transition
