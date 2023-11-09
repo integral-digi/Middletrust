@@ -28,37 +28,37 @@ const SignUpForm = () => {
                     <div className="w-full space-y-4">
                         <p className="font-secondary text-slate-600 text-sm">Email Address</p>
                         <div className="w-full relative">
-                            <input className="w-full h-12 pl-4 bg-transparent rounded border border-gray-300" id="mobile" type="email" />
+                            <input className="w-full h-12 pl-4 bg-transparent rounded border font-secondary border-gray-300" id="mobile" type="email" />
                             <img src="mailicon.svg" className="h-4 w-4 absolute right-6 top-4" alt="mail" />
                         </div>
                     </div>                    
                     <div className="w-full space-y-4">
                         <p className="font-secondary text-slate-600 text-sm">Mobile Number</p>
                         <div className="w-full relative">
-                            <input className="w-full h-12 pl-4 bg-transparent rounded border border-gray-300" id="mobile" type="number" />
+                            <input className="w-full h-12 pl-4 bg-transparent rounded border font-secondary border-gray-300" id="mobile" type="number" />
                             <img src="dialpad.svg" className="h-4 w-4 absolute right-6 top-4" alt="dial" />
                         </div>
                     </div>
                     <div className="w-full space-y-4">
                         <p className="font-secondary text-slate-600 text-sm">Password</p>
                         <div className="w-full relative">
-                            <input className="w-full h-12 pl-4 bg-transparent rounded border border-gray-300" id="password" type="password" />
+                            <input className="w-full h-12 pl-4 bg-transparent rounded border font-secondary border-gray-300" id="password" type="password" />
                             <img src="Eye-open.svg" className="h-4 w-4 absolute right-6 top-4" alt="eye" />
                         </div>    
                     </div>
                     <div className="w-full space-y-4">
                         <p className="font-secondary text-slate-600 text-sm">Confirm Password</p>
                         <div className="w-full relative">
-                            <input className="w-full h-12 pl-4 bg-transparent rounded border border-gray-300" id="password" type="password" />
+                            <input className="w-full h-12 pl-4 bg-transparent rounded border font-secondary border-gray-300" id="password" type="password" />
                             <img src="Eye-open.svg" className="h-4 w-4 absolute right-6 top-4" alt="eye" />
                         </div>    
                     </div>
                 </div>
                 <button type="submit" onClick={handleSubmit} className="w-full h-12 bg-indigo-500 rounded">
-                    <p className="w-max text-white text-center text-base font-secondary justify-center mx-auto">Login</p>
+                    <p className="w-max text-white text-center text-base font-secondary justify-center mx-auto">Create Account</p>
                 </button>
                 <div className="w-full flex items-center mx-auto justify-center">
-                    <p className="text-slate-600 text-center text-base font-primary">Have an account?</p><p className="text-indigo-500 text-base font-primary">&nbsp; Sign in</p>
+                    <p className="text-slate-600 text-center text-base font-primary">Have an account?</p><p className="text-indigo-500 text-base font-primary">&nbsp; <Link href="/secure-login">Sign in</Link></p>
                 </div>
             </div>
             <div className="space-y-8 w-full">

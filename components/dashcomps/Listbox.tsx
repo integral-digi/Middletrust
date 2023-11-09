@@ -19,25 +19,25 @@ const ChartDropdown = () => {
           <span className="h-auto w-3"><ChevronDownIcon /></span>
         </Listbox.Button>
         <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1">
-            <Listbox.Options className="absolute z-10 shadow bg-white w-max h-fit px-5 space-y-2 py-6 cursor-pointer">
-            {sortOptions.map((sortOption) => (
-                <Listbox.Option
-                key={sortOption.id}
-                value={sortOption}
-                className="text-slate-600 text-sm font-secondary whitespace-nowrap"
-                >
-                {sortOption.name}
-                </Listbox.Option>
-            ))}
-            </Listbox.Options>
-            </Transition>
+            as={Fragment}
+            enter="transition ease-out duration-200"
+            enterFrom="opacity-0 translate-y-1"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition ease-in duration-150"
+            leaveFrom="opacity-100 translate-y-0"
+            leaveTo="opacity-0 translate-y-1">
+          <Listbox.Options className="absolute z-10 shadow bg-white dark:bg-slate-600 w-max h-fit px-5 space-y-2 py-6 cursor-pointer">
+          {sortOptions.map((sortOption) => (
+              <Listbox.Option
+              key={sortOption.id}
+              value={sortOption}
+              className="text-slate-600 dark:text-white text-sm font-secondary whitespace-nowrap"
+              >
+              {sortOption.name}
+              </Listbox.Option>
+          ))}
+          </Listbox.Options>
+        </Transition>
       </Listbox>
     )
   };

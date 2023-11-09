@@ -27,7 +27,7 @@ const withdrawLabels: string[] = [
 
 const serviceCharge: number = 0;
 
-const InfoBar = ({withdrawAmt, setWithdrawAmt}: any) => {
+const InfoBar = ({withdrawAmt}: any) => {
     const pStyle: string = "text-slate-600 text-base font-primary dark:text-white";
     const pStyleTwo: string = "text-right text-slate-600 text-base font-secondary dark:text-white";
 
@@ -35,7 +35,7 @@ const InfoBar = ({withdrawAmt, setWithdrawAmt}: any) => {
     <div className="w-full space-y-12">
         <span className="flex items-center justify-between">
             <p className={pStyle}>{withdrawLabels[0]}</p>
-            <p className={pStyleTwo}>{formattedCurr(setWithdrawAmt)}</p>
+            <p className={pStyleTwo}>{formattedCurr(withdrawAmt)}</p>
         </span>
         <span className="flex items-center justify-between">
             <p className={pStyle}>{withdrawLabels[1]}</p>

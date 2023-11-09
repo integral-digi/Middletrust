@@ -1,19 +1,5 @@
 import { formattedCurr } from "@/components/dashcomps/Balances";
 
-interface userInfoProps {
-    name: string;
-    bank: string;
-    accNum: number;
-    routing: number;
-}
-
-const userInfo: userInfoProps = {
-    name: "Efe O",
-    bank: "Silvergate Bank",
-    accNum: 7787778877,
-    routing: 60779018,
-};
-
 const withdrawLabels: string[] = [
     "Amount to Deposit",
     "Method",
@@ -31,26 +17,14 @@ const DepSideBar = ({depositAmt, setDepositAmt}: any) => {
     const pStyleTwo: string = "text-right text-slate-600 text-base font-secondary dark:text-white";
 
    return (
-    <div className="w-full space-y-12">
+    <div className="w-full space-y-12 h-screen">
         <span className="flex items-center justify-between">
             <p className={pStyle}>{withdrawLabels[0]}</p>
             <p className={pStyleTwo}>{formattedCurr(depositAmt)}</p>
         </span>
         <span className="flex items-center justify-between">
             <p className={pStyle}>{withdrawLabels[1]}</p>
-            <p className={pStyleTwo}>{userInfo.name}</p>
-        </span>
-        <span className="flex items-center justify-between">
-            <p className={pStyle}>{withdrawLabels[2]}</p>
-            <p className={pStyleTwo}>{userInfo.bank}</p>
-        </span>
-        <span className="flex items-center justify-between">
-            <p className={pStyle}>{withdrawLabels[3]}</p>
-            <p className={pStyleTwo}>{userInfo.accNum}</p>
-        </span>
-        <span className="flex items-center justify-between">
-            <p className={pStyle}>{withdrawLabels[4]}</p>
-            <p className={pStyleTwo}>{userInfo.routing}</p>
+            <p className={pStyleTwo}>Wire Transfer</p>
         </span>
         <hr className="w-full h-px bg-zinc-300" />
         <span className="flex items-center justify-between">

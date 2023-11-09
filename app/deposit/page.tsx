@@ -16,7 +16,7 @@ const DepHome = () => {
       </div>
       <div className="mx-auto py-6 w-[64%] lg:w-full lg:px-8">
         <div className="top-0 py-6 w-full">
-          <TopBarTwo currentTitle="Deposit" />
+          <TopBarTwo currentTitle="deposit" />
         </div>
         <div className="mt-24 grid grid-cols-2 gap-[20%] justify-between w-full lg:space-y-24 lg:block">
           <div className="block space-y-24 w-full">

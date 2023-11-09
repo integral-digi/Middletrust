@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react';
 import { Tooltip } from 'flowbite-react';
 import Link from 'next/link';
@@ -14,11 +15,11 @@ const navData: NavbarLinkProps[] = [
   { icon: "Withdrawal.svg", label: 'Withdraw Funds', href: "/withdraw" },
   { icon: "Summary.svg", label: 'transactions', href: "/transactions" },
   { icon: "Trustlinkdash.svg", label: 'Trustlink', href: "/trustlink" },
-  { icon: "Profile.svg", label: 'Account', href: "/account" }
+  { icon: "Profile.svg", label: 'Contacts', href: "/contacts" }
 ];
 
 const navDataTwo: NavbarLinkProps[] = [
-  { icon: "Settings.svg", label: 'Settings', href: "/settings" },
+  { icon: "Settings.svg", label: 'Account', href: "/account" },
   { icon: "Referral.svg", label: 'Refer', href: "/refer" },
 ];
 

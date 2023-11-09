@@ -7,7 +7,7 @@ const AllTransactions = () => {
     const textStyleTwo: string = "text-slate-600 dark:text-white text-base font-primary";
 
     return (
-        <div className="w-full space-y-6">
+        <div className="w-full space-y-6 min-h-screen">
           {users.map((user: UserProps)=> (
             <div className="space-y-6" key={user.id}>
                 <div className="flex items-start justify-between w-full">

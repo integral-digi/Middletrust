@@ -51,7 +51,7 @@ const SignInForm = () => {
                     <p className="w-max text-white text-center text-base font-secondary justify-center mx-auto">Login</p>
                 </button>
                 <div className="w-full flex items-center mx-auto justify-center">
-                    <p className="text-slate-600 text-center text-base font-primary">Don’t have an account?</p><p className="text-indigo-500 text-base font-primary">&nbsp; Sign up</p>
+                    <p className="text-slate-600 text-center text-base font-primary">Don’t have an account?</p><p className="text-indigo-500 text-base font-primary">&nbsp; <Link href="/create-account">Sign up</Link></p>
                 </div>
             </div>
             <div className="space-y-8 w-full">
