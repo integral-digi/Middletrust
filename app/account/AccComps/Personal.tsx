@@ -24,20 +24,7 @@ const PersonalSettings = () => {
     }
     const [fileUpload, setFileUpload] = useState(null);
     const handleFileUpload = (event: any) => {
-        const selectedFile = event.target.files[0];
-    
-        if (selectedFile) {
-          // You can perform additional validation here, such as file type and size.
-          // For simplicity, we'll assume any selected file is a valid image.
-          
-          // Display the selected avatar in the component
-          const reader = new FileReader();
-          reader.onload = () => {
-            setFileUpload(reader.result);
-          };
-          reader.readAsDataURL(selectedFile);
-        }
-      };
+        setFileUpload(event.target.files[0]);
     }
     return (
         <div className="w-[70%] min-h-screen space-y-16">

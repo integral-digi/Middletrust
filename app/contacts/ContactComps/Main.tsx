@@ -1,5 +1,5 @@
 const pageItems = {
-    image: "/images/empty-state.svg",
+    image: "empty-state.svg",
     text: "No contacts yet",
     buttonText: "Create Transaction"
 }
