@@ -1,4 +1,5 @@
 "use client"
+import { user } from "@/app/account/AccComps/UserData";
 import Limiter from "./Limiter";
 
 export const formattedCurr = (curr: number) => {
@@ -10,8 +11,8 @@ export const formattedCurr = (curr: number) => {
     });
 };
 
-const ledgerBal: string = formattedCurr(23450);
-const escrowBal: string = formattedCurr(30489);
+const ledgerBal: string = formattedCurr(user.balance.ledgerBal);
+const escrowBal: string = formattedCurr(user.balance.escrowBal);
 
 const BalanceAndLimits = () => {
     return (

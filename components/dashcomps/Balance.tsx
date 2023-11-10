@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { user } from "@/app/account/AccComps/UserData";
 import { formattedCurr } from "./Balances";
 
 const AccBalance = () => {
-  const balance: number = 5206;
-  const cardNum: number = 5595;
+  const balance: number = user.balance.availableBal;
+  const cardNum: number = user.virtualInfo.cardNum;
 
   const [showBalance, setShowBalance] = useState(true);
 
