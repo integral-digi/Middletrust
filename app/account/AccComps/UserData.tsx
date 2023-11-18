@@ -14,7 +14,7 @@ export const user = {
         routeNum: "60779018"
     },
     balance: {
-        availableBal: 5206,
+        availableBal: 5315,
         ledgerBal: 23450,
         escrowBal: 30489
     },
