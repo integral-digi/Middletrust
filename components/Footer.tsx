@@ -35,13 +35,13 @@ const Footer = () => {
     ];
 
     const socialLinks: SocialData[] = [
-        { label: "X", href: "https://x.com/middletrusthq", icon: "/images/x.svg" },
-        { label: "Facebook", href: "https://facebook.com/middletrust", icon: "/images/facebook.svg" },
-        { label: "Instagram", href: "https://instagram.com/middletrusthq", icon: "/images/instagram.svg" },
-        { label: "Youtube", href: "https://youtube.com/middletrust", icon: "/images/youtube.svg" },
-        { label: "Medium", href: "https://medium.com/@middletrust", icon: "/images/medium.svg" },
-        { label: "Github", href: "https://github.com/middletrust", icon: "/images/github.svg" },
-        { label: "Linkedin", href: "https://linkedin.com/company/middletrust", icon: "/images/linkedin.svg" }
+        { label: "X", href: "https://x.com/middletrusthq", icon: "/assets/x.svg" },
+        { label: "Facebook", href: "https://facebook.com/middletrust", icon: "/assets/facebook.svg" },
+        { label: "Instagram", href: "https://instagram.com/middletrusthq", icon: "/assets/instagram.svg" },
+        { label: "Youtube", href: "https://youtube.com/middletrust", icon: "/assets/youtube.svg" },
+        { label: "Medium", href: "https://medium.com/@middletrust", icon: "/assets/medium.svg" },
+        { label: "Github", href: "https://github.com/middletrust", icon: "/assets/github.svg" },
+        { label: "Linkedin", href: "https://linkedin.com/company/middletrust", icon: "/assets/linkedin.svg" }
     ];
 
     const copyright: string = "© 2024 Middletrust LLC. All rights reserved.";
