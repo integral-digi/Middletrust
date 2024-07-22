@@ -2,8 +2,8 @@
 import { Carousel } from 'flowbite-react';
 
 const bannerImg = [
-    {img: "stats.svg", description: "Secure your payments with our state of the art escrow"},
-    {img: "stats.svg", description: "Close your deals with confidence"},
+    {img: "/images/stats.svg", description: "Secure your payments with our state of the art escrow"},
+    {img: "/images/stats.svg", description: "Close your deals with confidence"},
 ];
 
 const Banner = () => {
