@@ -1,45 +1,66 @@
-const CTA = () => {
-    return (
-        <div className=" mx-auto w-[90%] h-[491px] relative max-w-[1200px] bg-indigo-500 dark:bg-stone-900 overflow-clip">            
-            <div className="bg-image-opaque float-left lg:hidden">
-             <img 
-                className=""
-                src="bg-image-opaque.svg" 
-                alt="background image" />
-            </div> 
-            <div className="mx-auto pt-24 h-max w-[560px] lg:w-[72%]"> 
-                <h1 className="text-center text-white leading-normal font-secondary text-6xl sm:text-3xl md:text-4xl lg:text-4xl lg:leading-relaxed">
-                    Why wait? Get started now
-                </h1>
-            </div>
-            <div className="flex items-center justify-evenly translate-x-[-25%] w-[600px] my-auto mx-auto space-x-0 pt-12 lg:translate-x-0 lg:w-max">
-                <button className="w-[48%] h-[60px] rounded-[10px] border border-white hover:bg-white my-auto lg:mx-auto lg:w-[100%] lg:flex lg:items-center">
-                    <p className="text-white text-lg hover:text-indigo-500 font-black lg:px-9">
-                        Sign up now
-                    </p>
-                </button>
-                <button className="w-[12%] h-[60px] bg-white rounded-[10px] my-auto lg:hidden">
+const ctaContent = {
+    backgroundImage: "/assets/bg-image-opaque.svg",
+    title: "Why wait?",
+    titletwo: "Get started now",
+    signUpText: "Sign up now",
+    googlePlayImage: "/assets/googleplay.svg",
+    appleStoreImage: "/assets/apple.svg",
+    backgroundImageTwo: "/assets/bg-image-opaque-two.svg"
+  };
+  
+  const CTA = () => {
+      return (
+        <div className="w-full h-fit px-24 xl:px-8 dark:bg-[#1E1A1A]">
+            <div className="relative bg-indigo-500 dark:bg-stone-900 overflow-clip">
+                <div className="bg-image-opaque absolute left-0 top-0 xl:hidden">
                     <img 
-                        src="googleplay.svg"
-                        alt="google play"
-                        className="w-6 h-6 mx-auto my-auto" />
-                </button>
-                <button className="w-[12%] h-[60px] bg-white rounded-[10px] my-auto lg:hidden">
+                        className="w-fit"
+                        src={ctaContent.backgroundImage} 
+                        alt="background image" 
+                    />
+                </div>   
+                <div className="py-36">  
+                    <div className="w-full flex flex-col items-center justify-center space-y-12">     
+                        <div className="w-full flex flex-col justify-center space-y-4"> 
+                            <h1 className="text-center text-white leading-normal font-secondary text-6xl xl:text-4xl xl:leading-relaxed">
+                                {ctaContent.title}
+                            </h1>
+                            <h1 className="text-center text-white leading-normal font-secondary text-6xl xl:text-4xl xl:leading-relaxed">
+                                {ctaContent.titletwo}
+                            </h1>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                            <button className="h-16 px-12 rounded-xl border border-white hover:bg-white">
+                                <p className="text-white text-lg hover:text-indigo-500 font-black">
+                                    {ctaContent.signUpText}
+                                </p>
+                            </button>
+                            <button className="w-fit h-16 px-8 bg-white rounded-xl xl:hidden">
+                                <img 
+                                    src={ctaContent.googlePlayImage}
+                                    alt="google play"
+                                    className="w-6 h-6" />
+                            </button>
+                            <button className="w-fit h-16 px-8 bg-white rounded-xl xl:hidden">
+                                <img 
+                                    src={ctaContent.appleStoreImage}
+                                    alt="apple store"
+                                    className="w-6 h-6" />
+                            </button>
+                        </div>
+                    </div>  
+                </div> 
+                <div className="bg-image-opaque-two absolute bottom-0 right-0">
                     <img 
-                        src="apple.svg"
-                        alt="apple store"
-                        className="w-6 h-6 mx-auto my-auto" />
-                </button>
+                        className="w-fit"
+                        src={ctaContent.backgroundImageTwo}
+                        alt="background image" 
+                    /> 
+                </div>             
             </div>
-            
-            <div className="bg-image-opaque-two float-right absolute right-0 top-[360px] lg:top-[376px] lg:-bottom-full">
-             <img 
-                className=""
-                src="bg-image-opaque-two.svg"
-                alt="background image" /> 
-            </div>             
         </div>
-    );
-};
-
-export default CTA;
+      );
+  };
+  
+  export default CTA;
+  

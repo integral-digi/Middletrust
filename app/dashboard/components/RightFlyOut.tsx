@@ -19,11 +19,11 @@ const RightFlyOut = ({ user }: { user: UserProps }) => {
         "Total Purchases",
       ], []);
 
-    const divStyle: string = "flex items-center justify-between";
+    const divStyle: string = "w-full flex items-center justify-between";
 
     return (
-        <div className="bg-white dark:bg-[#1E1A1A] h-full">
-            <div className="relative px-16 pt-16 pb-80 w-fit h-full z-50 space-y-7">
+        <div className="bg-white dark:bg-[#1E1A1A] h-full overflow-y-scroll w-full">
+            <div className="relative p-16 w-fit h-full z-50 space-y-7 lg:px-8">
                 <h1 className="text-slate-600 dark:text-white text-xl font-secondary">Trustee Insight</h1>
                 <hr className="w-full h-px border border-gray-300" />
                 <div className="mt-6 space-y-7">
@@ -35,7 +35,7 @@ const RightFlyOut = ({ user }: { user: UserProps }) => {
                             placement='bottom'
                             content={`${user.name} is verified`}
                             className='dark:bg-stone-900 dark:text-white font-primary w-max px-4 py-4 ml-24'>
-                            {user.isVerified ? <img src="verify.svg" alt="verified" className="absolute left-[92px] bottom-4 cursor-pointer" /> : null}
+                            {user.isVerified ? <img src="/assets/verify.svg" alt="verified" className="absolute left-[92px] bottom-4 cursor-pointer" /> : null}
                         </Tooltip>
                     </div>
                     <div className={divStyle}>

@@ -1,38 +1,45 @@
 import { users } from "./TransactionData";
 import { UserProps } from "./TransactionData";
-import { formattedCurr } from "@/components/dashcomps/Balances";
+import { formattedCurr } from "@/app/dashboard/components/Balances";
+
+const tableClass = {
+    tr: "py-8 pl-12 w-1/4 font-primary text-nowrap"
+};
+  
 
 const AllTransactions = () => {
-    const textStyleOne: string = "text-lefttext-slate-600 dark:text-white text-base font-secondary";
-    const textStyleTwo: string = "text-slate-600 dark:text-white text-base font-primary";
 
     return (
-        <div className="w-full space-y-6 min-h-screen">
-          {users.map((user: UserProps)=> (
-            <div className="space-y-6" key={user.id}>
-                <div className="flex items-start justify-between w-full">
-                    <section className="w-12 h-12 object-cover">
-                        <img src={user.avatar} alt={user.name} className="w-full h-full rounded-full"/>
-                    </section>
-                    <section className="block w-1/4">
-                        <section className={textStyleOne}>{user.name}</section>
-                        <section className={textStyleTwo}>{user.lastTxn.time}</section>
-                    </section>
-                    <section className="block w-1/4">
-                        <span className={textStyleOne}>{formattedCurr(user.lastTxn.amount)}</span>
-                    </section>
-                    <section className="block w-1/4">
-                        <span className={textStyleOne}>{user.lastTxn.status}</span>
-                    </section>
-                    <section className="h-3 w-auto">
-                        {user.icon}
-                    </section>
-                </div>
-                <hr className="w-full h-0.5 bg-neutral-100" />
-            </div>
-          ))}  
+        <div className="space-y-12">
+        <div className="xl:overflow-x-scroll border-2 border-blue-300/10 rounded-2xl">
+          <table className="min-w-full bg-transparent text-slate-600 dark:text-white text-left">
+            <thead className="p-4 dark:bg-[#1E1A1A] bg-neutral-100 text-slate-600 dark:text-white/80 font-secondary">
+              <tr className="w-full">
+                <th className={tableClass.tr}>Trustee</th>
+                <th className={tableClass.tr}>Amount</th>
+                <th className={tableClass.tr}>Status</th>
+                <th className={tableClass.tr}>Txn Time</th>
+              </tr>
+            </thead>
+            <tbody className="w-full">
+              {users.map((user: UserProps, index) => (
+                <tr key={user.id} className={` hover:bg-slate-800/10 cursor-pointer ${index % 2 === 0 ? "dark:bg-stone-900 bg-white" : "bg-neutral-100 dark:bg-stone-800/20"}`}>
+                  <td className={tableClass.tr}><img className="w-12 h-12 rounded-full" src={user.avatar} alt={user.name} /></td>
+                  <td className={tableClass.tr}>${user.lastTxn.amount.toFixed(2)}</td>
+                  <td className={tableClass.tr}>{user.lastTxn.status}</td>
+                  <td className={tableClass.tr}>{user.lastTxn.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+    </div>
     );
 }
 
 export default AllTransactions;
+
+
+
+
+ 

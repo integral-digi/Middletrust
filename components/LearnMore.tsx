@@ -1,15 +1,20 @@
-import Link from "next/link"
+import Link from "next/link";
+
+const learnText = {
+    title: "Learn more",
+    href: "#"
+}
 
 const LearnMore = () => {
     return (
-        <div className="w-64 h-6 pt-16 grid grid-cols-2 space-x-0">
-            <Link className="text-indigo-500 text-lg font-primary left-0" href="#">
-                Learn more
+        <div className="w-fit h-6 flex items-center space-x-3">
+            <Link className="text-indigo-500 text-lg font-primary" href={learnText.href}>
+                {learnText.title}
             </Link>
-            <div className="my-auto flex">
+            <div className="w-fit">
                 <img 
-                    src="left.svg"
-                    className="w-2.5 h-4"
+                    src="/assets/left.svg"
+                    className="w-2.5 h-3"
                     alt="left" />
             </div>
         </div>

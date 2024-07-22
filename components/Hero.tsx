@@ -1,47 +1,55 @@
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
+const heroTextContent = {
+  title: "Secure and ",
+  animationSequence: ["seamless", 2000, "tidier", 2000, "smoother", 2000],
+  transactions: " transactions",
+  description: "the leading provider of state-of-the-art escrow services to safeguard individuals and businesses from transactional fraud.",
+  buttonText: "Start Now",
+  contactText: "Contact Sales"
+};
+
 const Hero = () => {
     return (
-        <div className="flex w-full bg-white dark:bg-[#1E1A1A]  sm:h-auto">
-            <div className="flex mx-auto my-auto pt-12 pb-24 gap-[10%] relative items-center lg:px-8 lg:block lg:space-y-16">   
-                <div className="w-[45%] my-auto lg:w-[100%]">
-                    <div className="w-[560px] lg:w-[100%]">
-                        <span className="text-slate-900 dark:text-white leading-normal text-8xl font-black sm:text-4xl md:text-5xl lg:text-6xl lg:leading-relaxed">
-                            Secure and &#8201;
+        <div className="flex items-center w-full bg-white dark:bg-[#1E1A1A] h-full">
+            <div className="flex justify-between items-center xl:flex-col xl:space-y-16 p-24 xl:px-8 relative">   
+                <div className="w-[40%] xl:w-full space-y-12">
+                    <div className="w-full md:w-full">
+                        <span className="text-slate-900 dark:text-white leading-normal text-8xl font-black xl:text-6xl xl:leading-relaxed">
+                            {heroTextContent.title}
                         </span>
                         <TypeAnimation
-                            sequence={["seamless", 2000, "tidier", 2000, "clearer", 2000]}
+                            sequence={heroTextContent.animationSequence}
                             wrapper="span"
-                            className="text-indigo-500 text-8xl leading-normal font-black sm:text-4xl md:text-5xl lg:text-6xl lg:leading-relaxed"
+                            className="text-indigo-500 text-8xl leading-normal font-black sm:text-4xl md:text-5xl xl:text-6xl xl:leading-relaxed"
                             cursor={true}
                             repeat={Infinity} />
-
-                        <span className="text-slate-900 dark:text-white leading-normal text-8xl font-black sm:text-4xl md:text-5xl lg:text-6xl lg:leading-relaxed">
-                            &#8201; transactions
+                        <span className="text-slate-900 dark:text-white leading-normal text-8xl font-black sm:text-4xl md:text-5xl xl:text-6xl xl:leading-relaxed">
+                            {heroTextContent.transactions}
                         </span>
                     </div>
-                    <div className="font-primary w-[560px] text-slate-600 dark:text-white text-lg lg:w-[100%]">
-                        the leading provider of state-of-the-art escrow services to safeguard individuals and businesses from transactional fraud.
+                    <div className="font-primary text-slate-600 dark:text-white text-lg xl:w-full">
+                        {heroTextContent.description}
                     </div>
-                    <div className="flex-col space-x-9 w-full sm:w-[338px] sm:space-x-4">
-                        <button className="w-[200px] h-[46.15px] bg-indigo-500 rounded-[5px] mt-[50px] sm:w-[160px]">
+                    <div className="flex items-center space-x-9 w-full">
+                        <button className=" bg-indigo-500 h-12 px-12 flex items-center rounded-md">
                             <p className="text-white text-lg font-primary">
-                                Start Now
+                                {heroTextContent.buttonText}
                             </p>
                         </button>
                         <Link className="text-indigo-500 text-lg font-primary" href="#">
-                            Contact Sales
+                            {heroTextContent.contactText}
                         </Link>
                     </div>
                 </div>
-                <div className="absolute flex items-center left-[480px] -mt-32 mx-auto rotate-15 lg:hidden">
-                    <img src="styled-arrow.svg"
+                <div className="absolute left-[600px] mb-32 flex items-center rotate-15 xl:hidden">
+                    <img src="/assets/styled-arrow.svg"
                         alt="arrow" />
                 </div>
-                <div className="w-[50%] my-auto lg:w-[100%]">
-                    <img className="w-[640px] h-[auto] lg:w-[100%] lg:h-auto"
-                        src="illus_one.svg"
+                <div className="w-1/2 xl:w-full">
+                    <img className="xl:w-full xl:h-auto"
+                        src="/assets/illus_one.svg"
                         alt="illustration one" />
                 </div>
             </div>

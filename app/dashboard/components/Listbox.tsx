@@ -14,9 +14,11 @@ const ChartDropdown = () => {
   
     return (
       <Listbox value={selectedOption} onChange={setSelectedOption}>
-        <Listbox.Button className="w-32 h-7 px-2 bg-slate-100 dark:bg-stone-900 rounded-md flex items-center justify-between">
+        <Listbox.Button className="w-fit h-7 px-6 bg-slate-100 dark:bg-stone-900 rounded-md flex items-center justify-between">
           <p className="text-slate-600 dark:text-white text-xs font-secondary">{selectedOption.name}</p>
-          <span className="h-auto w-3"><ChevronDownIcon /></span>
+          <span className="h-auto w-3">
+            <ChevronDownIcon />
+          </span>
         </Listbox.Button>
         <Transition
             as={Fragment}
@@ -26,7 +28,7 @@ const ChartDropdown = () => {
             leave="transition ease-in duration-150"
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1">
-          <Listbox.Options className="absolute z-10 shadow bg-white dark:bg-slate-600 w-max h-fit px-5 space-y-2 py-6 cursor-pointer">
+          <Listbox.Options className="absolute z-10 shadow bg-white dark:bg-slate-600 w-max h-fit px-5 space-y-2 py-6 rounded-lg cursor-pointer">
           {sortOptions.map((sortOption) => (
               <Listbox.Option
               key={sortOption.id}

@@ -33,7 +33,7 @@ const PersonalSettings = () => {
                     <img src={user.avatar} alt={user.username} className="w-full h-full rounded-full" />
                     <section className="bg-neutral-100 w-6 h-6 rounded-full flex items-center absolute bottom-0 right-0 cursor-pointer">
                         <label htmlFor="avatarUploader" className="mx-auto cursor-pointer">
-                            <img src="camera.svg" alt="upload" className="w-4 h-4" />
+                            <img src="/assets/camera.svg" alt="upload" className="w-4 h-4" />
                         </label>
                         <input type="file" accept="image" className="hidden" id="avatarUploader" onChange={handleFileUpload} />
                     </section>
@@ -42,7 +42,7 @@ const PersonalSettings = () => {
                     <p className={pStyle}>Username</p>
                     <section className="relative">
                         <input type="text" className={inputStyle} value={userName} onChange={handleUChange} />
-                        <img src="/username.svg" alt="User Icon" className="w-4 h-4 absolute right-4 top-4" />
+                        <img src="/assets//username.svg" alt="User Icon" className="w-4 h-4 absolute right-4 top-4" />
                     </section>
                 </section>
                 <section className="flex flex-1 items-center space-x-16">

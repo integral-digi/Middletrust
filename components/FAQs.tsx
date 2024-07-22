@@ -50,16 +50,20 @@ const stepElements: FaqType[] = steps.map((step, index) => ({
 //The main FAQ function (Arrow Function exported at the end of the module)
 const FAQ = () => {
     return (
-        <div className='w-[540px] h-[100%] block lg:w-[100%]'>
+        <div className='w-full h-full'>
             {stepElements.map((stepElement) => (
                 <Disclosure as="div">
                     {({ open }) => (
                         <>
-                            <Disclosure.Button className="flex py-[28px] w-full justify-between">
-                                <div className='left-0 text-slate-600 dark:text-white text-lg font-primary lg:text-left lg:flex-wrap'>{stepElement.step}</div>
-                                <div className='w-4 h-4 relative dark:text-white'>{stepElement.icon}</div>
+                            <Disclosure.Button className="flex items-center py-4 w-full justify-between">
+                                <div className='text-slate-600 text-left dark:text-white text-lg font-primary'>
+                                    {stepElement.step}
+                                </div>
+                                <div className='w-4 h-4 dark:text-white'>
+                                    {stepElement.icon}
+                                </div>
                             </Disclosure.Button>
-                                <hr className='w-[540px] h-px bg-gray-300 lg:w-[100%]' />
+                                <hr className='w-full h-px bg-gray-300' />
                             <Transition
                                 enter="transition duration-250 ease-out"
                                 enterFrom="transform scale-95 opacity-0"
@@ -68,10 +72,10 @@ const FAQ = () => {
                                 leaveFrom="transform scale-100 opacity-100"
                                 leaveTo="transform scale-95 opacity-0"
                             >
-                                <Disclosure.Panel className="py-[36px]">
+                                <Disclosure.Panel className="py-8">
                                     <div className='dark:text-white'>{stepElement.description}</div>
                                 </Disclosure.Panel>
-                                    <hr className='w-[540px] h-px bg-gray-300 lg:w-[100%]' />
+                                    <hr className='w-full h-px bg-gray-300' />
                             </Transition>
                         </>
                     )}

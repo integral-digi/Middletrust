@@ -17,7 +17,7 @@ export const CodeSnippet = ({ code }: any) => {
         role="button"
         className=""
       >
-        <img src="copy.svg" className="h-6 w-6"/>
+        <img src="/assets/copy.svg" className="h-6 w-6"/>
       </button>
     </div>
   );

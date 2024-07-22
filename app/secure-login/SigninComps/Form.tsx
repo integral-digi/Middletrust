@@ -17,7 +17,7 @@ const SignInForm = () => {
     return (
         <div className="w-80 space-y-8 mx-auto py-16">
             <div className="left-0 block pb-8">
-                <img src="midicon.svg" alt="logo" className="h-12 w-auto" />
+                <img src="/assets/midicon.svg" alt="logo" className="h-12 w-auto" />
             </div>
             <div className="w-max h-20 relative space-y-4">
                 <h2 className="text-gray-600 text-4xl font-black leading-10">Welcome Back!</h2>
@@ -29,14 +29,14 @@ const SignInForm = () => {
                         <p className="font-secondary text-slate-600 text-sm">Mobile Number</p>
                         <div className="w-full relative">
                             <input className="w-full h-12 pl-4 bg-transparent rounded border border-gray-300" id="mobile" type="number" />
-                            <img src="dialpad.svg" className="h-4 w-4 absolute right-6 top-4" alt="dial" />
+                            <img src="/assets/dialpad.svg" className="h-4 w-4 absolute right-6 top-4" alt="dial" />
                         </div>
                     </div>
                     <div className="w-full space-y-4">
                         <p className="font-secondary text-slate-600 text-sm">Password</p>
                         <div className="w-full relative">
                             <input className="w-full h-12 pl-4 bg-transparent rounded border border-gray-300" id="password" type="password" />
-                            <img src="Eye-open.svg" className="h-4 w-4 absolute right-6 top-4" alt="eye" />
+                            <img src="/assets/Eye-open.svg" className="h-4 w-4 absolute right-6 top-4" alt="eye" />
                         </div>    
                     </div>
                 </div>
@@ -62,14 +62,14 @@ const SignInForm = () => {
                 </div>
                 <button type="button" className="w-full h-12 relative bg-transparent rounded border border-gray-300">
                     <div className="flex items-center space-x-5 justify-center"> 
-                        <img src="GoogleIcon.svg" className="w-6 h-6" alt="google" />
+                        <img src="/assets/GoogleIcon.svg" className="w-6 h-6" alt="google" />
                         <p className="text-gray-600 text-center text-base font-primary leading-tight">
                             Sign in with Google
                         </p>
                     </div>
                 </button>
                 <button type="button" className="w-full justify-center h-12 relative bg-transparent flex items-center space-x-5 rounded border border-gray-300">
-                    <img src="FBicon.svg" className="w-6 h-6" alt="facebook" />
+                    <img src="/assets/FBicon.svg" className="w-6 h-6" alt="facebook" />
                     <p className="text-gray-600 text-center text-base font-primary leading-tight">
                         Sign in with Facebook
                     </p>

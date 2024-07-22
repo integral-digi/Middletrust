@@ -16,7 +16,7 @@ const Limiter = ({bgcolor, progress, height}: any) => {
 	}
 	
 	return (
-        <div className='' style={Parentdiv}>
+        <div className='w-full' style={Parentdiv}>
             <div style={Childdiv} />
         </div>
 	);

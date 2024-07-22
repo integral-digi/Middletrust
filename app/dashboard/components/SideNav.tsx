@@ -10,17 +10,17 @@ interface NavbarLinkProps {
 }
 
 const navData: NavbarLinkProps[] = [
-  { icon: "Home.svg", label: 'Home', href: "/dashboard" },
-  { icon: "Transaction.svg", label: 'Deposit Funds', href: "/deposit" },
-  { icon: "Withdrawal.svg", label: 'Withdraw Funds', href: "/withdraw" },
-  { icon: "Summary.svg", label: 'transactions', href: "/transactions" },
-  { icon: "Trustlinkdash.svg", label: 'Trustlink', href: "/trustlink" },
-  { icon: "Profile.svg", label: 'Contacts', href: "/contacts" }
+  { icon: "/assets/Home.svg", label: 'Home', href: "/dashboard" },
+  { icon: "/assets/Transaction.svg", label: 'Deposit Funds', href: "/deposit" },
+  { icon: "/assets/Withdrawal.svg", label: 'Withdraw Funds', href: "/withdraw" },
+  { icon: "/assets/Summary.svg", label: 'transactions', href: "/transactions" },
+  { icon: "/assets/Trustlinkdash.svg", label: 'Trustlink', href: "/trustlink" },
+  { icon: "/assets/Profile.svg", label: 'Contacts', href: "/contacts" }
 ];
 
 const navDataTwo: NavbarLinkProps[] = [
-  { icon: "Settings.svg", label: 'Account', href: "/account" },
-  { icon: "Referral.svg", label: 'Refer', href: "/refer" },
+  { icon: "/assets/Settings.svg", label: 'Account', href: "/account" },
+  { icon: "/assets/Referral.svg", label: 'Refer', href: "/refer" },
 ];
 
 const SideNav = () => {
@@ -51,7 +51,11 @@ const SideNav = () => {
     <nav className="w-24 h-screen bg-neutral-100 dark:bg-stone-900 fixed left-0 top-0">
       <div className='relative mx-auto px-8 py-12 justify-center items-center space-y-16'>
         <div className='cursor-pointer'>
-          <img src='midicon.svg' alt='logo' />
+          <img 
+            src='/assets/midicon.svg' 
+            alt='logo' 
+            className='w-fit'
+            />
         </div>
         <div>
           {renderLinks(navData)}

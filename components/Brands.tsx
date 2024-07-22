@@ -1,5 +1,7 @@
-// import { motion, useScroll } from "framer-motion";
-import ParallaxText from "./ParallaxText";
+const brandsText = {
+    title: "Serving local & global brands",
+    subtitle: "Middletrust is helping innovative brands eliminate transactional and payment fraud. We are trusted by local and international brands who value credibility, security and speed in their everyday dealings with customers, freelancers, and artisans.",
+}
 
 const Brands = () => {
     const brandNames = [
@@ -9,7 +11,7 @@ const Brands = () => {
     ];
 
     const logoShelf = brandNames.map((names, rowIndex) => (
-        <div key={rowIndex} className="flex lg:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:space-x-0">
+        <div key={rowIndex} className="flex items-center flex-wrap justify-between">
             {names.map((name, colIndex) => (
                 <img
                     key={`${name}-${colIndex}`}
@@ -22,22 +24,19 @@ const Brands = () => {
     ));
 
     return (
-        <div className="flex w-full h-full bg-neutral-100 dark:bg-stone-900 py-24 relative"> 
-            <div className="mx-auto my-auto lg:space-y-0 lg:px-8">
-                <div className="w-[95%] lg:w-[100%] space-y-9 lg:space-y-6">
-                    <h1 className="w-[813px] text-slate-900 dark:text-white leading-normal text-8xl font-black sm:text-4xl md:text-5xl lg:text-6xl lg:w-[84%] lg:leading-relaxed">
-                        Serving local & global brands
+        <div className="w-full h-fit bg-neutral-100 dark:bg-stone-900 "> 
+            <div className="p-24 xl:px-8">
+                <div className="w-[95%] xl:w-full space-y-8 xl:space-y-6">
+                    <h1 className="w-3/4 text-slate-900 dark:text-white leading-normal text-8xl font-black sm:text-4xl md:text-5xl xl:text-6xl xl:w-[84%] xl:leading-relaxed">
+                        {brandsText.title}
                     </h1>
-                    <p className="font-primary w-[813px] text-slate-600 dark:text-white text-lg lg:w-full">
-                        Middletrust is helping innovative brands eliminate transactional and payment fraud. We are trusted by 
-                        local and international brands who value credibility, security 
-                        and speed in their everyday dealings with customers, freelancers, 
-                        and artisans.
+                    <p className="font-primary w-3/4 text-slate-600 dark:text-white text-lg xl:w-full">
+                        {brandsText.subtitle}
                     </p>
-                    <div className="w-[100%] h-auto pt-6 left-0 top-0 flex-col justify-start items-start inline-flex lg:pt-0 lg:w-full">   
-                        <div className="">{logoShelf[0]}</div>
-                        <div className="lg:hidden">{logoShelf[1]}</div>
-                        <div className="lg:hidden">{logoShelf[2]}</div>
+                    <div className="w-full h-fit pt-6 flex-col space-y-2">   
+                        <div>{logoShelf[0]}</div>
+                        <div className="xl:hidden">{logoShelf[1]}</div>
+                        <div className="xl:hidden">{logoShelf[2]}</div>
                     </div>  
                 </div>              
             </div>

@@ -42,7 +42,22 @@ const config: Config = {
   },
   plugins: [
     require('@headlessui/tailwindcss'),
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          /* For Firefox */
+          scrollbarWidth: 'none',
+          /* For IE and Edge */
+          '-ms-overflow-style': 'none',
+          /* For WebKit browsers */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    }
   ],
 };
 

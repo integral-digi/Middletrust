@@ -1,41 +1,45 @@
 "use client"
-import AccBalance from "@/components/dashcomps/Balance";
-import BalanceAndLimits from "@/components/dashcomps/Balances";
-import BottomNav from "@/components/dashcomps/DashMobNav";
-import Quicklinks from "@/components/dashcomps/Quicklinks";
-import SideNav from "@/components/dashcomps/SideNav";
-import TopBar from "@/components/dashcomps/TopBar";
-import DashChart from "@/components/dashcomps/TransactChart";
-import Transactable from "@/components/dashcomps/Transactable";
-import DashContact from "@/components/dashcomps/UserContacts";
+import AccBalance from "@/app/dashboard/components/Balance";
+import BalanceAndLimits from "@/app/dashboard/components/Balances";
+import BottomNav from "@/app/dashboard/components/DashMobNav";
+import Quicklinks from "@/app/dashboard/components/Quicklinks";
+import SideNav from "@/app/dashboard/components/SideNav";
+import TopBar from "@/app/dashboard/components/TopBar";
+import DashChart from "@/app/dashboard/components/TransactChart";
+import Transactable from "@/app/dashboard/components/Transactable";
+import DashContact from "@/app/dashboard/components/UserContacts";
 
 const DashHome = () => {
     return (
-        <div className="w-full dark:bg-[#1E1A1A] dark:text-white lg:w-fit relative">
-            <div className="lg:hidden">
-                <SideNav />
-            </div>
-            <div className="mx-auto py-6 w-fit lg:w-full lg:px-8">
-                <div className="top-0 py-6 w-full">
-                    <TopBar />
-                </div>
-                <div className="mt-24 grid grid-cols-2 justify-between gap-[20%] w-full lg:space-y-24 lg:block">
-                    <div className="block space-y-24 w-fit">
-                        <div className="space-y-12">
-                            <AccBalance />
-                            <BalanceAndLimits />
+        <div className="w-full dark:bg-[#1E1A1A] dark:text-white xl:w-full relative">
+            <div className="flex justify-center items-center">
+                <div className="pt-4 pb-32 w-fit xl:w-full px-16 xl:px-8">
+                    <div className="top-0 py-6 w-full">
+                        <TopBar />
+                    </div>
+                    <div className="w-fit flex justify-between items-start xl:w-full xl:space-y-12 xl:flex-col xl:space-x-0">
+                        <div className="xl:hidden">
+                            <SideNav />
                         </div>
-                        <Transactable />
+                        <div className="w-full flex lg:flex-col space-x-36 xl:space-x-0 xl:space-y-14">
+                            <div className="space-y-14 w-fit xl:w-full">
+                                <div className="space-y-14 w-full">
+                                    <AccBalance />
+                                    <BalanceAndLimits />
+                                </div>
+                                <Transactable />
+                            </div>
+                            <div className="space-y-14 w-full">
+                                <DashChart />
+                                <DashContact />
+                                <Quicklinks />
+                            </div>
+                        </div>
                     </div>
-                    <div className="space-y-12 w-fit lg:w-full">
-                        <DashChart />
-                        <DashContact />
-                        <Quicklinks />
-                    </div>
-                <div className="absolute w-full hidden shadow lg:block">
-                    <BottomNav />
                 </div>
-                </div>
+            </div>
+            <div className="fixed bottom-0 w-full hidden shadow xl:block">
+                <BottomNav />
             </div>
         </div>
     );

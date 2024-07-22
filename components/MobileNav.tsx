@@ -3,23 +3,26 @@ import { useState } from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import NavTwo from "./NavTwo";
+import { DarkProps } from "./DarkToggler";
 
-const mainLogo = [
-    "midicon.svg",
-    "logo_dark.svg"
-];
+const mainLogo = {
+   light: "/assets/midicon.svg",
+   dark: "/assets/logo_dark.svg"
+}
 
-const MobileNav = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
+const MobileNav: React.FC<DarkProps> = ({ isDarkMode }) => {
     return (
-        <div className="hidden lg:block">
-            <div className="mobile-nav flex w-full h-max z-50">
-                <div className="flex w-screen justify-between py-[64px] px-8 mx-auto">
-                    <div className="w-auto h-6 float-left">
-                        <img src={!isDarkMode ? mainLogo[0] : mainLogo[1]} alt="logo" className="" />
+        <div className="hidden xl:block">
+            <div className="mobile-nav w-full h-fit p-8 z-50">
+                <div className="flex items-center w-full justify-between">
+                    <div className="w-auto h-6">
+                        <img 
+                            src={isDarkMode && mainLogo.light || mainLogo.dark} 
+                            alt="logo" 
+                            className="main-logo" 
+                        />
                     </div>
-                    <div className="">
+                    <div className="w-fit flex items-center justify-around">
                         <Popover data-popover-target="NavBar">
                             <Popover.Button className="dark:fill-white">
                                 <Burger />
@@ -33,8 +36,8 @@ const MobileNav = () => {
                                 leave="transition ease-in duration-150"
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1">
-                                    <Popover.Panel id="NavBar" className="z-40 absolute right-[-0px] top-0">
-                                        <NavTwo />
+                                    <Popover.Panel id="NavBar" className="z-40 absolute left-0 top-0 min-h-screen">
+                                        <NavTwo isDarkMode={isDarkMode} />
                                     </Popover.Panel>
                                 </Transition>
                         </Popover>

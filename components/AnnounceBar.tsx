@@ -1,7 +1,7 @@
 const Announce = () => {
     return (
-        <div className="flex w-full h-[50px] relative bg-indigo-500">
-            
+        <div className="flex w-full h-12 bg-indigo-500">
+           {/* For Announcements and Updates */}
         </div>
     );
 };

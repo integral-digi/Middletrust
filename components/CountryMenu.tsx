@@ -4,16 +4,16 @@ interface CountryType {
 };
 
 const Countries: CountryType[] = [
-    {nation: "Ghana", flag: "ghana.png"}, 
-    {nation: "Kenya", flag: "kenya.png"},
-    {nation: "Nigeria", flag: "nigeria.png"},
-    {nation: "South Africa", flag: "za.png"}
+    {nation: "Ghana", flag: "/assets/ghana.png"}, 
+    {nation: "Kenya", flag: "/assets/kenya.png"},
+    {nation: "Nigeria", flag: "/assets/nigeria.png"},
+    {nation: "South Africa", flag: "/assets/za.png"}
 ];
 
 const CountriesTwo: CountryType[] = [
-    {nation: "China", flag: "china.png"},
-    {nation: "United Kingdom", flag: "uk.png"},
-    {nation: "United States", flag: "usa.png"}
+    {nation: "China", flag: "/assets/china.png"},
+    {nation: "United Kingdom", flag: "/assets/uk.png"},
+    {nation: "United States", flag: "/assets/usa.png"}
 ];
 
 const CountryFlyout = () => {

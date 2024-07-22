@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const menuItems = [
-  { id: 1, name: "Account", icon: "Settings.svg" },
-  { id: 2, name: "Support", icon: "Supports.svg" },
-  { id: 3, name: "Logout", icon: "Logout.svg" },
+  { id: 1, name: "Account", icon: "/assets/Settings.svg" },
+  { id: 2, name: "Support", icon: "/assets/Supports.svg" },
+  { id: 3, name: "Logout", icon: "/assets/Logout.svg" },
 ];
 
 const AccDropdown = () => {

@@ -1,15 +1,15 @@
 "use client"
-import SideNav from "@/components/dashcomps/SideNav";
-import TopBarTwo from "@/components/dashcomps/TopbarTwo";
+import SideNav from "@/app/dashboard/components/SideNav";
+import TopBarTwo from "@/app/dashboard/components/TopbarTwo";
 import Main from "./ContactComps/Main";
 
 const ContactHome = () => {
   return (
-    <div className="w-full dark:bg-[#1E1A1A] dark:text-white lg:w-fit relative h-full min-h-screen">
-      <div className="lg:hidden">
+    <div className="w-full dark:bg-[#1E1A1A] dark:text-white xl:w-fit relative h-full min-h-screen">
+      <div className="xl:hidden">
         <SideNav />
       </div>
-      <div className="mx-auto py-6 w-[64%] lg:w-full lg:px-8">
+      <div className="mx-auto py-6 w-[64%] xl:w-full xl:px-8">
         <div className="top-0 py-6 w-full">
           <TopBarTwo currentTitle="contacts" />
         </div>

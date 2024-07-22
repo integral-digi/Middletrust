@@ -1,4 +1,4 @@
-import { formattedCurr } from "@/components/dashcomps/Balances";
+import { formattedCurr } from "@/app/dashboard/components/Balances";
 
 const withdrawLabels: string[] = [
     "Amount to Deposit",

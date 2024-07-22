@@ -10,7 +10,7 @@ const WithdrawForm = () => {
     const currencies = {naira: "₦", dollar: "$"};
     
     return (
-        <div className="mt-24 grid grid-cols-2 gap-[20%] justify-between w-full lg:space-y-24 lg:block">
+        <div className="mt-24 grid grid-cols-2 gap-[20%] justify-between w-full xl:space-y-24 xl:block">
             <div className="w-full h-full space-y-24 dark:bg-[#1E1A1A]">
                 <div className="flex items-center w-full space-x-7">
                     <span className="">

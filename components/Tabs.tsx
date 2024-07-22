@@ -5,7 +5,7 @@ import { codeNode, codePython, codePHP, codeGolang, codeJava } from './CodeAPI';
 
 const DevOptions = () => {
     return (
-        <div className="flex flex-col w-full py-6 sm:px-0 sm:block sm:mx-auto">
+        <div className="flex flex-col w-full py-6 xl:px-0 xl:mx-auto">
             <Tab.Group>
                 <Tab.List className="w-max justify-evenly space-x-4 py-1 px-2 rounded-[50px] bg-blue-900/20 ml-9">
                     <Tab className="px-2 py-1 ui-selected:bg-[#1E1A1A] ui-selected:text-white ui-selected:rounded-[50px] ui-selected:px-4">

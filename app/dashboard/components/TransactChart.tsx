@@ -6,7 +6,7 @@ interface SummaryDataProps {
     name: string;
     amount: number;
     fill: string;
-};
+}
 
 const transactionTotal: number = 59485;
 
@@ -20,7 +20,7 @@ const textStyle = "text-slate-600 dark:text-white text-xs font-primary leading-t
 
 const DashChart = () => {
     return (
-        <div className="w-full space-y-8 relative">
+        <div className="w-full space-y-8 flex flex-col justify-center relative">
             <div className="flex items-center justify-between">
                 <h3 className="text-slate-600 dark:text-white text-xl font-secondary tracking-tight">
                     Transaction Stats
@@ -29,7 +29,7 @@ const DashChart = () => {
                     <ChartDropdown />
                 </div>
             </div>
-            <div className="left-0 flex items-center justify-between space-x-0">
+            <div className="flex items-center justify-between xl:w-fit xl:justify-center relative">
                 <RadialBarChart
                     width={240}
                     height={240}
@@ -42,11 +42,11 @@ const DashChart = () => {
                 >
                     <RadialBar background dataKey="amount" />
                 </RadialBarChart>
-                <div className="w-max">
-                    {summaryData.map((item, index) => (
-                        <div className="space-y-5" key={index}>
+                <div className="w-max xl:hidden">
+                    {summaryData.map((item) => (
+                        <div className="space-y-5" key={item.name}>
                             <div className="flex space-x-2 py-1">
-                                <span className={`w-2 h-2 rounded-full bg-[${item.fill}]`} />
+                                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: item.fill }} />
                                 <span className="block">
                                     <p className={textStyle}>{item.name}</p>
                                     <p className={`${textStyle} opacity-50`}>{formattedCurr(item.amount)}</p>
@@ -55,7 +55,7 @@ const DashChart = () => {
                         </div>
                     ))}
                 </div>
-                <div className="my-auto left-[92px] mx-auto absolute">
+                <div className="my-auto left-24 mx-auto absolute">
                     <p className="w-max h-9 text-center text-slate-600 dark:text-white text-xl font-primary leading-loose">
                         ${transactionTotal}
                     </p>

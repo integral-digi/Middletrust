@@ -6,12 +6,12 @@ interface DataProps {
     id: number;
     name: string;
     icon: string;
-};
+}
 
 const quickInfo: DataProps[] = [
-    {id: 1, name: "Withdraw", icon: "midicon.svg"},
-    {id: 2, name: "Tutorials", icon: "midicon.svg"},
-    {id: 3, name: "Support", icon: "midicon.svg"}
+    {id: 1, name: "Withdraw", icon: "/assets/midicon.svg"},
+    {id: 2, name: "Tutorials", icon: "/assets/midicon.svg"},
+    {id: 3, name: "Support", icon: "/assets/midicon.svg"}
 ];
 
 const Quicklinks = () => {
@@ -26,18 +26,20 @@ const Quicklinks = () => {
                 </span>
             </div>
             <hr className="w-full h-0.5 bg-neutral-100" />
-            <div className="flex justify-between space-x-3">
+            <div className="flex space-x-3 xl:overflow-x-scroll scrollbar-hide w-full">
                 {quickInfo.map((singleInfo) => (
-                        <Link href={singleInfo.name.toLowerCase()} key={singleInfo.id} className={`${singleInfo.id === 2 ? "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-indigo-500 text-white rounded-2xl" : "cursor-pointer space-y-20 pl-4 py-6 w-1/3 h-max bg-neutral-100 rounded-2xl text-slate-600"}`}>
+                    <Link href={`/${singleInfo.name.toLowerCase()}`} key={singleInfo.id} className="w-[40%]">
+                        <div className={`cursor-pointer space-y-20 pl-4 pr-12 py-8 w-full h-full rounded-2xl ${singleInfo.id === 2 ? "bg-indigo-500 text-white" : "bg-neutral-100 text-slate-600"}`}>
                             <p className="text-xl font-secondary">
                                 {singleInfo.name}
                             </p>
                             <img 
                                 src={singleInfo.icon} 
                                 className="w-9 h-8 relative" 
-                                alt={singleInfo.name} />
-                        </Link>
-                    
+                                alt={`${singleInfo.name} icon`} 
+                            />
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>

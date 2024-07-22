@@ -44,48 +44,61 @@ const Footer = () => {
         { label: "Linkedin", href: "https://linkedin.com/company/middletrust", icon: "/images/linkedin.svg" }
     ];
 
-    const copyright: string = "© 2023 Middletrust LLC. All rights reserved.";
+    const copyright: string = "© 2024 Middletrust LLC. All rights reserved.";
 
     return (
-        <footer className="w-full dark:bg-[#1E1A1A] h-[auto] py-24 lg:px-8 lg:bg-clip-content">
-            <motion.div className="mx-auto max-w-6xl">
-                <div className="flex gap-[20%] w-full lg:block lg:space-y-16">
-                    <div className="w-[35%] text-slate-600 dark:text-white text-[15px] font-primary leading-normal lg:block lg:w-[90%]">
+        <footer className="w-full dark:bg-[#1E1A1A] h-fit p-24 xl:px-8 space-y-12">
+            <motion.div className="w-full flex justify-between xl:flex-col space-y-16">
+                <div className="w-[35%] flex flex-col space-y-12 xl:w-full xl:flex-col">
+                    <div className="text-slate-600 dark:text-white text-base font-primary leading-normal xl:block xl:w-[90%]">
                         {infoMessage}
                     </div>
-                    <div className="w-[45%] space-y-5 lg:w-[100%]">
-                        <h1 className="w-max text-slate-600 dark:text-white text-xl font-primary leading-normal lg:w-[100%] lg:text-2xl">Follow our socials</h1>
-                        {socialLinks.map((social) => (
-                            <div className="w-[50px] h-[50px] justify-evenly space-x-4 hover:bg-white bg-neutral-100 rounded-[10px] flex-col inline-flex lg:h-10 lg:w-10">
-                                <Link key={social.label} href={social.href} className="">
-                                    <img className="w-[18px] h-[18px] mx-auto lg:h-4 lg:w-4" src={social.icon} alt={social.label} />
-                                </Link>
-                            </div>
-                        ))}
+                    <div className="w-full space-y-8 xl:w-full">
+                        <h1 className="w-full text-slate-600 dark:text-white text-xl font-primary leading-normal xl:w-full xl:text-2xl">
+                            Stay in the loop
+                        </h1>
+                        <input 
+                            id="email_submit" 
+                            type="email" 
+                            placeholder="Email here..." 
+                            className=" caret-slate-500 focus:outline-dashed pl-9 w-full h-12 bg-neutral-100 rounded-xl xl:w-full placeholder:dark:text-white/80 dark:bg-stone-900"
+                        />
                     </div>
                 </div>
-                <div className="pt-16 justify-between">
-                    <div className="flex w-full gap-[20%] lg:block lg:space-y-12">
-                        <div className="relative w-[30%] lg:w-[100%]">
-                            <h1 className="w-max pb-9 text-slate-600 dark:text-white text-xl font-primary leading-normal lg:w-[100%] lg:text-2xl">
-                                Stay in the loop
+                <div className="w-[55%] xl:w-full">
+                    <div className="flex flex-col items-start space-y-12 xl:w-full xl:flex-col xl:space-y-16">
+                        <div className="w-fit space-y-6 xl:w-full">
+                            <h1 className="w-fit text-slate-600 dark:text-white text-xl font-primary leading-normal xl:w-full xl:text-2xl">
+                                Follow our socials
                             </h1>
-                            <input id="email_submit" type="email" placeholder="Email here..." className=" caret-slate-500 focus:outline-dashed pl-[36px] w-[100%] h-[50px] bg-neutral-100 rounded-[10px] lg:w-[90%] dark:bg-stone-900"/>
+                            <div className="w-full flex items-center space-x-4">
+                                {socialLinks.map((social, index) => (
+                                    <div key={index} className="w-12 h-12 flex items-center justify-center hover:bg-white bg-neutral-100 rounded-xl  xl:h-10 xl:w-10">
+                                        <Link key={social.label} href={social.href} target="_blank">
+                                            <img 
+                                                className="w-4 h-4 xl:h-4 xl:w-4" 
+                                                src={social.icon} 
+                                                alt={social.label} 
+                                            />
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="grid grid-cols-3 w-[50%] gap-20 lg:w-[100%] lg:grid lg:grid-cols-2">
-                            <div className="space-y-9">
+                        <div className="w-full flex items-start justify-between flex-1 flex-wrap xl:gap-12">
+                            <div className="space-y-8">
                                 <h1 className="text-xl font-primary text-slate-600 dark:text-neutral-200">Solutions</h1>
                                 {footerLinks[0].map((child, index)=>(
                                     <Link key={index} href={child.href} className="w-max block dark:text-white">{child.label}</Link>
                                 ))}
                             </div>
-                            <div className="space-y-9">
+                            <div className="space-y-8">
                                 <h1 className="text-xl font-primary text-slate-600 dark:text-neutral-200">Resources</h1>
                                 {footerLinks[1].map((child, index)=>(
                                     <Link key={index} href={child.href} className="w-max block dark:text-white">{child.label}</Link>
                                 ))}  
                             </div>
-                            <div className="space-y-9">
+                            <div className="space-y-8">
                                 <h1 className="text-xl font-primary text-slate-600 dark:text-neutral-200">Company</h1>
                                 {footerLinks[2].map((child, index)=>(
                                     <Link key={index} href={child.href} className="w-max block dark:text-white">{child.label}</Link>
@@ -94,21 +107,21 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between w-full h-6 relative pt-16">
-                    <div className="text-slate-600 whitespace-nowrap dark:text-white text-base w-1/2 font-primary leading-normal">
-                        {copyright}
-                    </div>
-                    <div className="w-1/2 inline-flex text-right text-neutral-400 text-base dark:bg-stone-900 dark:text-white leading-normal lg:hidden">
-                        <Link href="#">
-                            <p className="justify-items-end text-right">Privacy Policy</p>
-                        </Link>
-                        <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-                        <Link href="#">
-                            <p className="justify-items-end text-right">Terms of Service</p>
-                        </Link>
-                    </div>
-                </div>
             </motion.div>
+            <div className="flex justify-between items-center pt-16 xl:pt-4 w-full">
+                <div className="text-slate-600 whitespace-nowrap dark:text-white text-base w-[35%] font-primary leading-normal xl:w-full">
+                    {copyright}
+                </div>
+                <div className="w-[55%] flex items-center space-x-4 text-right text-neutral-400 text-base dark:bg-stone-900 dark:text-white leading-normal xl:hidden">
+                    <Link href="#">
+                        <p className="justify-items-end text-right">Privacy Policy</p>
+                    </Link>
+                    <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+                    <Link href="#">
+                        <p className="justify-items-end text-right">Terms of Service</p>
+                    </Link>
+                </div>
+            </div>
         </footer>
     );
 };

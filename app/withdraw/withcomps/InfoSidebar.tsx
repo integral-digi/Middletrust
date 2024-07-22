@@ -1,4 +1,4 @@
-import { formattedCurr } from "@/components/dashcomps/Balances";
+import { formattedCurr } from "@/app/dashboard/components/Balances";
 
 interface userInfoProps {
     name: string;

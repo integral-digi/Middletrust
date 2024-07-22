@@ -6,7 +6,7 @@ export const codeNode = () => (
     const fetch = require('node-fetch');
     
     // Set up the Middletrust API endpoint
-    const mtEndpoint = 'https://sandbox.middletrust.com';
+    const mtEndpoint = 'https://sandbox.middletrust.co';
     // Set up your Middletrust API credentials
     const apiKey = '<your-api-key>';
     const apiSecret = '<your-api-secret>';
@@ -15,11 +15,11 @@ export const codeNode = () => (
         const requestBody = {
             seller: {
                 name: 'John Smith',
-                email: 'john.smith@example.com'
+                email: 'john.smith@example.co'
             },
             buyer: {
                 name: 'Jane Doe',
-                email: 'jane.doe@example.com'
+                email: 'jane.doe@example.co'
             },
             amount: 500.00,
             currency: 'NGN'
@@ -36,7 +36,7 @@ export const codePython = () =>  (
     import requests
 
     # Set up the Middletrust API endpoint
-    mt_endpoint = 'https://sandbox.middletrust.com'
+    mt_endpoint = 'https://sandbox.middletrust.co'
     # Set up your Middletrust API credentials
     api_key = '<your-api-key>'
     api_secret = '<your-api-secret>'
@@ -45,11 +45,11 @@ export const codePython = () =>  (
         request_body = {
             'seller': {
                 'name': 'John Smith',
-                'email': 'john.smith@example.com'
+                'email': 'john.smith@example.co'
             },
             'buyer': {
                 'name': 'Jane Doe',
-                'email': 'jane.doe@example.com'
+                'email': 'jane.doe@example.co'
             },
             'amount': 500.00,
             'currency': 'NGN'
@@ -64,7 +64,7 @@ export const codePHP = () => (
         {`
     <?php
     // Set up the Middletrust API endpoint
-    $mtEndpoint = 'https://sandbox.middletrust.com';
+    $mtEndpoint = 'https://sandbox.middletrust.co';
 
     // Set up your Middletrust API credentials
     $apiKey = '<your-api-key>';
@@ -76,11 +76,11 @@ export const codePHP = () => (
         $requestBody = [
             'seller' => [
                 'name' => 'John Smith',
-                'email' => 'john.smith@example.com'
+                'email' => 'john.smith@example.co'
             ],
             'buyer' => [
                 'name' => 'Jane Doe',
-                'email' => 'jane.doe@example.com'
+                'email' => 'jane.doe@example.co'
             ],
             'amount' => 500.00,
             'currency' => 'NGN'
@@ -93,7 +93,7 @@ export const codeGolang = () => (
     <pre>
     {`
     // Set up the Middletrust API endpoint
-    const mtEndpoint = "https://sandbox.middletrust.com"
+    const mtEndpoint = "https://sandbox.middletrust.co"
 
     // Set up your Middletrust API credentials
     const apiKey = "<your-api-key>"
@@ -104,11 +104,11 @@ export const codeGolang = () => (
         requestBody := map[string]interface{}{
             "seller": map[string]interface{}{
                 "name":  "John Smith",
-                "email": "john.smith@example.com",
+                "email": "john.smith@example.co",
             },
             "buyer": map[string]interface{}{
                 "name":  "Jane Doe",
-                "email": "jane.doe@example.com",
+                "email": "jane.doe@example.co",
             },
             "amount":   500.00,
             "currency": "NGN",
@@ -124,7 +124,7 @@ export const codeJava = () =>  (
         public class MiddletrustEscrow {
 
             // Set up the Middletrust API endpoint
-            private static final String mtEndpoint = "https://sandbox.middletrust.com";
+            private static final String mtEndpoint = "https://sandbox.middletrust.co";
 
             // Set up your Middletrust API credentials
             private static final String apiKey = "<your-api-key>";
@@ -141,11 +141,11 @@ export const codeJava = () =>  (
                     String requestBody = "{" +
                             "\"seller\": {" +
                             "\"name\": \"John Smith\"," +
-                            "\"email\": \"john.smith@example.com\"" +
+                            "\"email\": \"john.smith@example.co\"" +
                             "}," +
                             "\"buyer\": {" +
                             "\"name\": \"Jane Doe\"," +
-                            "\"email\": \"jane.doe@example.com\"" +
+                            "\"email\": \"jane.doe@example.co\"" +
                             "}," +
                             "\"amount\": 500.00," +
                             "\"currency\": \"NGN\"" +
