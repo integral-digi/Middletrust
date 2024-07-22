@@ -88,7 +88,7 @@ const FormThree = ({ id, goBack }: any) => {
                 <p className={pStyle}>{formLabels.inputTen}</p>
                 <section className="flex items-center justify-between flex-1 space-x-4">
                     <section
-                        className={radioCardStyle(radioValue, "Buyer")}
+                        className={radioCardStyle(radioTwoValue, "Buyer")}
                         onClick={() => setRadioTwoValue("Buyer")}
                     >
                         <input
@@ -105,7 +105,7 @@ const FormThree = ({ id, goBack }: any) => {
                         </label>
                     </section>
                     <section
-                        className={radioCardStyle(radioValue, "Seller")}
+                        className={radioCardStyle(radioTwoValue, "Seller")}
                         onClick={() => setRadioTwoValue("Seller")}
                     >
                         <input
@@ -122,7 +122,7 @@ const FormThree = ({ id, goBack }: any) => {
                         </label>
                     </section>
                     <section
-                        className={radioCardStyle(radioValue, "Both")}
+                        className={radioCardStyle(radioTwoValue, "Both")}
                         onClick={() => setRadioTwoValue("Both")}
                     >
                         <input
