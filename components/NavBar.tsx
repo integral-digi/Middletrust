@@ -30,7 +30,7 @@ const NavBar: React.FC<DarkProps> = ({ isDarkMode }) => {
             <nav className="flex items-center justify-between ">
                 <div className="w-fit">
                     <img
-                        src={!isDarkMode ? mainLogoVariant : mainLogo}
+                        src={!isDarkMode && mainLogo || mainLogoVariant}
                         alt="logo"
                         className="w-auto h-6" 
                     />
