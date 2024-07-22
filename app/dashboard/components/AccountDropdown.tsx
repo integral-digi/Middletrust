@@ -34,7 +34,7 @@ const AccDropdown = () => {
               </>
             ) : (
               <>
-                <Link href="/secure-login" passHref className="flex items-center space-x-5">
+                <Link href="/sign-in" passHref className="flex items-center space-x-5">
                     <img src={item.icon} alt={item.name} className="w-4 h-4 relative" />
                     <p className="text-slate-600 dark:text-white text-base font-secondary">{item.name}</p>
                 </Link>

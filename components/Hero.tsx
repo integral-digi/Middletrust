@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { TypeAnimation } from "react-type-animation";
 
 const heroTextContent = {
@@ -11,6 +12,7 @@ const heroTextContent = {
 };
 
 const Hero = () => {
+    const router = useRouter();
     return (
         <div className="flex items-center w-full bg-white dark:bg-[#1E1A1A] h-full">
             <div className="flex justify-between items-center xl:flex-col xl:space-y-16 p-24 xl:px-8 relative">   
@@ -33,7 +35,7 @@ const Hero = () => {
                         {heroTextContent.description}
                     </div>
                     <div className="flex items-center space-x-9 w-full">
-                        <button className=" bg-indigo-500 h-12 px-12 flex items-center rounded-md">
+                        <button className=" bg-indigo-500 h-12 px-12 flex items-center rounded-md" onClick={()=>router.push("/sign-up")}>
                             <p className="text-white text-lg font-primary">
                                 {heroTextContent.buttonText}
                             </p>
