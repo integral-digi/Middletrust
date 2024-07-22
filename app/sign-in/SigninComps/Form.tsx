@@ -5,11 +5,11 @@ import { useState } from "react"
 const SignInForm = () => {
     const [inputValue, setInputValue] = useState('');
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: any) => {
       setInputValue(e.target.value);
     };
   
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
       e.preventDefault();
       // Handle form submission logic here, if needed
       console.log('Submitted value: ' + inputValue);

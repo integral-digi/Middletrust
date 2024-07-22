@@ -1,13 +1,16 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 import InfoBar from "./InfoSidebar";
 
-const WithdrawForm = () => {
-    const [withdrawAmt, setWithdrawAmt] = useState(0);
+const WithdrawForm: React.FC = () => {
+    const [withdrawAmt, setWithdrawAmt] = useState<number | string>(0);
+    
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setWithdrawAmt(e.target.value);
+        const value = e.target.value;
+        setWithdrawAmt(value ? parseFloat(value) : '');
     };
-    const currencies = {naira: "₦", dollar: "$"};
+
+    const currencies = { naira: "₦", dollar: "$" };
     
     return (
         <div className="mt-24 grid grid-cols-2 gap-[20%] justify-between w-full xl:space-y-24 xl:block">
@@ -16,7 +19,12 @@ const WithdrawForm = () => {
                     <span className="">
                         <p className="dark:text-white text-slate-600 text-2xl font-black">{currencies.dollar}</p>
                     </span>
-                    <input type="number" value={withdrawAmt} onChange={handleChange} className="w-full dark:text-white bg-transparent border-none text-slate-600 text-5xl font-black focus:outline-none selection:outline-none focus:border-none" />
+                    <input
+                        type="number"
+                        value={withdrawAmt}
+                        onChange={handleChange}
+                        className="w-full dark:text-white bg-transparent border-none text-slate-600 text-5xl font-black focus:outline-none selection:outline-none focus:border-none"
+                    />
                 </div>
                 <button id="withdrawal" className="w-full px-8 h-20 bg-transparent rounded-lg border-2 border-gray-300 border-dashed">
                     <p className="text-center dark:text-white text-slate-600 text-base font-secondary">
@@ -24,7 +32,7 @@ const WithdrawForm = () => {
                     </p>
                 </button>
             </div>
-            <div className="block w-full">
+            <div className="w-full">
                 <InfoBar withdrawAmt={withdrawAmt} />
             </div>
         </div>

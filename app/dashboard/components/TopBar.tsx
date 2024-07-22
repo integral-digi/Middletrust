@@ -1,6 +1,6 @@
 "use client"
 import SearchIcon from "@/public/images/SearchIcon";
-import DarkToggler from "../../../components/DarkToggler";
+import DarkToggler, { DarkProps } from "../../../components/DarkToggler";
 import NotifyIcon from "@/public/images/Notify";
 import { useMemo, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
@@ -8,7 +8,6 @@ import { timeOfDay } from "@/utils/time";
 import { user } from "@/app/account/AccComps/UserData";
 import AccDropdown from "./AccountDropdown";
 import SearchModal from "./Search";
-import { DarkProps } from "../../../components/NavBar";
 
 export interface NavProps {
   name: string;
