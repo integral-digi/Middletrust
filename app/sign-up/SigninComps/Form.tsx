@@ -15,7 +15,7 @@ const SignUpForm = () => {
       console.log('Submitted value: ' + inputValue);
     };
     return (
-        <div className="w-80 space-y-8 mx-auto py-16">
+        <div className="w-1/2 space-y-8 mx-auto py-16 xl:w-full xl:px-36">
             <div className="left-0 block pb-8">
                 <img src="/assets/midicon.svg" alt="logo" className="h-12 w-auto" />
             </div>
