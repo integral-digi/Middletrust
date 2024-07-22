@@ -1,8 +1,10 @@
 "use client"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react"
 
 const SignInForm = () => {
+    const router = useRouter();
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (e: any) => {
@@ -13,6 +15,7 @@ const SignInForm = () => {
       e.preventDefault();
       // Handle form submission logic here, if needed
       console.log('Submitted value: ' + inputValue);
+      router.push("/dashboard");
     };
     return (
         <div className="w-80 space-y-8 mx-auto py-16">

@@ -9,6 +9,7 @@ import IntegrationMenu from "./IntegrationMenu";
 import CountryFlyout from "./CountryMenu";
 import AboutFlyout from "./AboutMenu";
 import ChevronDown from "@/public/images/chevronDown";
+import { useRouter } from "next/navigation";
 
 const mainLogo = "/assets/logo.svg";
 
@@ -23,6 +24,7 @@ export const navlinks = [
 ];
 
 const NavBar: React.FC<DarkProps> = ({ isDarkMode }) => {
+    const router = useRouter();
     return (
         <div className="w-full h-20 dark:bg-[#1E1A1A] py-8 px-24 xl:hidden">
             <nav className="flex items-center justify-between ">
@@ -137,10 +139,10 @@ const NavBar: React.FC<DarkProps> = ({ isDarkMode }) => {
                     </Popover>
                 </div>
                 <div className="w-fit flex items-center space-x-10 ">
-                    <Link className="font-book text-slate-600 dark:text-white" href={navlinks[2].href}>
+                    <Link className="font-book text-slate-600 dark:text-white" href="/sign-in">
                         Login
                     </Link>
-                    <button className="w-24 h-[46.15px] bg-indigo-500 rounded-md">
+                    <button className="w-24 h-[46.15px] bg-indigo-500 rounded-md" onClick={()=>router.push("/sign-up")}>
                         <p className="text-white">Sign up</p>
                     </button>
                 </div>
