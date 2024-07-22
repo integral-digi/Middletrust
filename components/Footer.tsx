@@ -47,7 +47,7 @@ const Footer = () => {
     const copyright: string = "© 2024 Middletrust LLC. All rights reserved.";
 
     return (
-        <footer className="w-full dark:bg-[#1E1A1A] h-fit p-24 xl:px-8 space-y-12">
+        <footer className="footer-main w-full dark:bg-[#1E1A1A] h-fit p-24 xl:px-8 space-y-12">
             <motion.div className="w-full flex justify-between xl:flex-col space-y-16">
                 <div className="w-[35%] flex flex-col space-y-12 xl:w-full xl:flex-col">
                     <div className="text-slate-600 dark:text-white text-base font-primary leading-normal xl:block xl:w-[90%]">
